@@ -1,0 +1,26 @@
+#ifndef GAME_H_INCLUDED
+#define GAME_H_INCLUDED
+
+//CONSTANTS DEFINITIONS//
+#define NORTH 1
+#define EAST 2
+#define SOUTH 3
+#define WEST 4
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct game
+{
+    int *current_direction;
+    char game_map [62][52];
+    int *lives;
+    int *speed;
+    struct linked_list *snake;
+
+}game;
+
+void launch_game(int walls_on, int borders_on, int start_speed, int increasing_speed_on);//TODO: Ajouter la vue en paramètre//
+struct linked_list init_snake(char game_map[62][52]);
+
+#endif

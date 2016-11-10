@@ -1,0 +1,134 @@
+# depslib dependency file v1.0
+1475746534 source:z:\snake\block.c
+	"block.h"
+
+1475745714 z:\snake\block.h
+	<stdio.h>
+	<stdlib.h>
+
+1475746710 source:z:\snake\linked_list.c
+	"linked_list.h"
+
+1475746734 z:\snake\linked_list.h
+	<stdio.h>
+	<stdlib.h>
+	"block.h"
+
+1475744002 source:z:\snake\main.c
+	<stdio.h>
+	<stdlib.h>
+	"block.h"
+	"linked_list.h"
+
+1476198284 source:c:\users\sadisu\desktop\snake\game.c
+	<stdio.h>
+	<stdlib.h>
+	"game.h"
+	"snakePart.h"
+	"linked_list.h"
+
+1476282175 c:\users\sadisu\desktop\snake\game.h
+	<stdio.h>
+	<stdlib.h>
+
+1476197304 c:\users\sadisu\desktop\snake\snakepart.h
+	<stdio.h>
+	<stdlib.h>
+
+1476197418 c:\users\sadisu\desktop\snake\linked_list.h
+	<stdio.h>
+	<stdlib.h>
+	"snakePart.h"
+
+1476282319 source:c:\users\sadisu\desktop\snake\linked_list.c
+	"linked_list.h"
+
+1476197438 source:c:\users\sadisu\desktop\snake\main.c
+	<stdio.h>
+	<stdlib.h>
+	"snakePart.h"
+	"linked_list.h"
+
+1476197314 source:c:\users\sadisu\desktop\snake\snakepart.c
+	"snakePart.h"
+
+1476194684 source:e:\snake\game.c
+	<stdio.h>
+	<stdlib.h>
+	"game.h"
+	"snakePart.h"
+	"linked_list.h"
+
+1476278576 e:\snake\game.h
+	<stdio.h>
+	<stdlib.h>
+
+1476342434 e:\snake\snakepart.h
+	<stdio.h>
+	<stdlib.h>
+
+1476344130 e:\snake\linked_list.h
+	<stdio.h>
+	<stdlib.h>
+	"snakePart.h"
+
+1476343082 source:e:\snake\main.c
+	<stdio.h>
+	<stdlib.h>
+	"snakePart.h"
+	"linked_list.h"
+
+1476342490 source:e:\snake\snakepart.c
+	"snakePart.h"
+
+1476344368 source:e:\snake\linked_list.c
+	<stdio.h>
+	<stdlib.h>
+	"linked_list.h"
+
+1476198284 source:f:\snake\game.c
+	<stdio.h>
+	<stdlib.h>
+	"game.h"
+	"snakePart.h"
+	"linked_list.h"
+
+1476282176 f:\snake\game.h
+	<stdio.h>
+	<stdlib.h>
+
+1478443002 f:\snake\snakepart.h
+	<stdio.h>
+	<stdlib.h>
+
+1478440656 f:\snake\linked_list.h
+	<stdio.h>
+	<stdlib.h>
+	"snakePart.h"
+	"direction.h"
+
+1478443630 source:f:\snake\snakepart.c
+	"snakePart.h"
+
+1478444858 source:f:\snake\linked_list.c
+	<stdio.h>
+	<stdlib.h>
+	"linked_list.h"
+	"direction.h"
+
+1478445616 source:f:\snake\main.c
+	<stdio.h>
+	<stdlib.h>
+	"snakePart.h"
+	"linked_list.h"
+	"direction.h"
+
+1478438112 source:f:\snake\direction.c
+	<stdio.h>
+	<stdlib.h>
+	"direction.h"
+
+1478438058 f:\snake\direction.h
+	<stdio.h>
+	<stdlib.h>
+
