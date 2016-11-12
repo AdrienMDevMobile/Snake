@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 #include "snakePart.h"
 /*
 Returns the address of the snakePart after the snakePart given in parameter
@@ -18,7 +21,7 @@ snakePart* createSnakePart(int x, int y){
             exit(0);
         }
 
-    toReturn->x = x; 
+    toReturn->x = x;
     toReturn->y = y;
     toReturn->nextSnakePart = NULL;
 
@@ -43,6 +46,9 @@ snakePart* createSnakePartAfter(int x, int y, snakePart **pointerPrevPart){
 }
 
 void deleteSnakePart(snakePart *bl){
+    if(bl->nextSnakePart != NULL) {
+        deleteSnakePart(nextSnakePart(bl->nextSnakePart));
+    }
     free(bl);
 }
 

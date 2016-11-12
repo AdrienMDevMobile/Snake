@@ -22,6 +22,7 @@ snakePart* createSnakePart(int x, int y);
 snakePart* createSnakePartBefore(int x, int y, snakePart *nextPart);
 /* Create a new part behind the one given. The old one will point to the new one */
 snakePart* createSnakePartAfter(int x, int y, snakePart **pointerPrevPart);
+/* Recurent function, if bl's nextSnakePart is not null, it ask it's next part to delete itself, then bl deletes itself. */
 void deleteSnakePart(snakePart *bl);
 
 void addNextSnakePart(snakePart *pointer, snakePart *pointed);

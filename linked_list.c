@@ -33,6 +33,7 @@ linkedList * createList(int x, int y, int direction, int speed){
 /* Destroy the linked list */
 //TODO : Eliminer les elements un à un.
 void deleteLinkedList(linkedList *list){
+    deleteSnakePart(list->snakeTail);
     free(list);
 }
 
