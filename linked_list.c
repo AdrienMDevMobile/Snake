@@ -58,6 +58,7 @@ int shouldMove(linkedList *list, int * countdown){
         return 0;
     }
 }
+
 linkedList * moveList(linkedList *list){
 
     if(list->growth > 0){
