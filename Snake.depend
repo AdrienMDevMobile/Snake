@@ -216,3 +216,44 @@
 	<stdlib.h>
 	"snakePart.h"
 
+1478951925 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\direction.c
+	<stdio.h>
+	<stdlib.h>
+	"direction.h"
+
+1478951925 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\direction.h
+	<stdio.h>
+	<stdlib.h>
+
+1478951925 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\game.c
+	<stdio.h>
+	<stdlib.h>
+	"game.h"
+	"snakePart.h"
+	"linked_list.h"
+
+1478951925 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\game.h
+	<stdio.h>
+	<stdlib.h>
+
+1478951925 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\snakepart.h
+	<stdio.h>
+	<stdlib.h>
+
+1478951925 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\linked_list.h
+	<stdio.h>
+	<stdlib.h>
+	"snakePart.h"
+	"direction.h"
+
+1478951925 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\snakepart.c
+	<stdio.h>
+	<stdlib.h>
+	"snakePart.h"
+
+1479220565 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\linked_list.c
+	<stdio.h>
+	<stdlib.h>
+	"linked_list.h"
+	"direction.h"
+

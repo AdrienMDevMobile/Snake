@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <windows.h>
+#include "output.h"
 
 #include "snakePart.h"
 #include "linked_list.h"
 #include "direction.h"
 #include "input_functions.h"
+
 
 int main()
 {
@@ -83,6 +86,7 @@ int main()
 
         shouldMove(snake, snake->countdown);
         moveList(snake);
+        gotoligcol(snake->x, snake->y);
     }*/
 }
 

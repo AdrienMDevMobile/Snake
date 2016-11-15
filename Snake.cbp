@@ -51,6 +51,10 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="output.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="output.h" />
 		<Unit filename="snakePart.c">
 			<Option compilerVar="CC" />
 			<Option target="Debug" />
