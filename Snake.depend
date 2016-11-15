@@ -257,3 +257,33 @@
 	"linked_list.h"
 	"direction.h"
 
+1479224186 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<windows.h>
+	"output.h"
+	"apple.h"
+	"snakePart.h"
+	"linked_list.h"
+	"direction.h"
+	"input_functions.h"
+
+1479224107 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\output.h
+	<stdio.h>
+	<stdlib.h>
+
+1479220328 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\input_functions.h
+	<stdio.h>
+	<stdlib.h>
+
+1479224155 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\output.c
+	"output.h"
+
+1479220155 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\apple.c
+	"apple.h"
+
+1479220171 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\apple.h
+	<stdio.h>
+	<stdlib.h>
+

@@ -8,6 +8,4 @@ void gotoligcol( int lig, int col );
 
 void print_map();
 
-
-
 #endif

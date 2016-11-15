@@ -3,9 +3,9 @@
 //Move the cursor on one
 void gotoligcol( int lig, int col ) {
        // ressources
-       COORD mycoord;
+       /*COORD mycoord;
 
        mycoord.X = col;
        mycoord.Y = lig;
-       SetConsoleCursorPosition( GetStdHandle( STD_OUTPUT_HANDLE ), mycoord );
+       SetConsoleCursorPosition( GetStdHandle( STD_OUTPUT_HANDLE ), mycoord );*/
 }
