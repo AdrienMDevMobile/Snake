@@ -1,5 +1,5 @@
-#ifndef LINKED_LIST_H_INCLUDED
-#define LINKED_LIST_H_INCLUDED
+#ifndef snakeList_H_INCLUDED
+#define snakeList_H_INCLUDED
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,7 +9,7 @@
 
 //TODO : Limit snake speed
 
-typedef struct linkedList
+typedef struct snakeList
 {
     int length;
 
@@ -28,25 +28,25 @@ typedef struct linkedList
 
     /*   Direction : the direction (struct with x and y) */
     struct direction *direction;
-} linkedList;
+} snakeList;
 
 
-linkedList * createList(int x, int y, int direction, int speed);
+snakeList * createList(int x, int y, int direction, int speed);
 //TODO
-void addPartToList(linkedList *list, int x, int y);
+void addPartToList(snakeList *list, int x, int y);
 
 /*
 Returns to the game if the snake should move this frame, then decreases the countdown (or resets if cd = 0)
 We also need to pass the pointer of the elements because we want to modify it.
 */
-int shouldMove(linkedList *list, int *countdown);
+int shouldMove(snakeList *list, int *countdown);
 //TODO
-linkedList * moveList(linkedList *list);
+snakeList * moveList(snakeList *list);
 
 
 //Later
-void deleteLinkedList(linkedList *list);
+void deletesnakeList(snakeList *list);
 
-//TODO int getDirection(linkedList *list);
+//TODO int getDirection(snakeList *list);
 
-#endif // LINKED_LIST_H_INCLUDED
+#endif // snakeList_H_INCLUDED

@@ -16,11 +16,11 @@ typedef struct game
     char game_map [62][52];
     int *lives;
     int *speed;
-    struct linked_list *snake;
+    struct snakeList *snake;
 
 }game;
 
 void launch_game(int walls_on, int borders_on, int start_speed, int increasing_speed_on);//TODO: Ajouter la vue en paramètre//
-struct linked_list init_snake(char game_map[62][52]);
+struct snakeList init_snake(char game_map[62][52]);
 
 #endif

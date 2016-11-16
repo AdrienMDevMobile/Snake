@@ -2,17 +2,17 @@
 #include <stdlib.h>
 
 
-#include "linked_list.h"
+#include "snakeList.h"
 #include "direction.h"
 
 /*
 Create the linked list
 Contains five parts    */
-linkedList * createList(int x, int y, int direction, int speed){
+snakeList * createList(int x, int y, int direction, int speed){
 
     /*Creates the list */
-    linkedList *toReturn = NULL;
-    toReturn = malloc(sizeof(linkedList));
+    snakeList *toReturn = NULL;
+    toReturn = malloc(sizeof(snakeList));
     if (toReturn == NULL){exit(0);} /* Alocation failed */
     toReturn->length = 1;
 
@@ -32,23 +32,23 @@ linkedList * createList(int x, int y, int direction, int speed){
 
 /* Destroy the linked list */
 //TODO : Eliminer les elements un à un.
-void deleteLinkedList(linkedList *list){
+void deletesnakeList(snakeList *list){
     deleteSnakePart(list->snakeTail);
     free(list);
 }
 
-void addPartToList(linkedList *list, int x, int y){
+void addPartToList(snakeList *list, int x, int y){
     snakePart *s = createSnakePartBefore(x, y, list->snakeTail);
     list->snakeTail = s;
     list->length++;
 }
 
 
-int getLength(linkedList *list){
+int getLength(snakeList *list){
     return list->length;
 }
 
-int shouldMove(linkedList *list, int * countdown){
+int shouldMove(snakeList *list, int * countdown){
     if(countdown == 0) {
         *countdown = list->speed;
         return 1;
@@ -59,7 +59,7 @@ int shouldMove(linkedList *list, int * countdown){
     }
 }
 
-linkedList * moveList(linkedList *list){
+snakeList * moveList(snakeList *list){
 
     if(list->growth > 0){
         snakePart* newPart = createSnakePartAfter(list->snakeHead->x + list->direction->x,
@@ -88,7 +88,7 @@ linkedList * moveList(linkedList *list){
 }
 
 /*
-direction * getDirection(linkedList *list){
+direction * getDirection(snakeList *list){
     return list->direction;
 }
 */

@@ -6,7 +6,7 @@
 
 #include "apple.h"
 #include "snakePart.h"
-#include "linked_list.h"
+#include "snakeList.h"
 #include "direction.h"
 #include "input_functions.h"
 
@@ -14,33 +14,7 @@
 int main()
 {
     srand(time(NULL)); //Creates the randomness inside the program
-
-    //TEST ADRIEN
-    /*printf("testa");
-    linkedList *test = createList(1, 1, south, 4);
-    //    addSnakePartToList(test, createSnakePart(1, 2));
-    printf("testb \n");
-
-    printf("%d",test->length);
-
-    int i = 1;
-    while(i<7){
-        moveList(test);
-        i++;
-    }
-    printf("testc \n");
-
-    snakePart * tmp = test->snakeTail;
-    while(tmp != NULL){
-        printf(" %d %d ",tmp->x, tmp->y);
-        tmp = tmp->nextSnakePart;
-    }
-
-
-    deleteLinkedList(test);
-    printf("Test");
-
-    return 0;*/
+    //testCreationSnake();
 
     //APPLE TEST
     /*
@@ -65,8 +39,8 @@ int main()
 
     //-------------DON'T TOUCH : First shot at input-------------//
 
-
-    /*linkedList *snake = createList(1, 1, south, 4);
+    /*
+    snakeList *snake = createList(1, 1, south, 4);
     while(1) {
 
         if(_kbhit()) {

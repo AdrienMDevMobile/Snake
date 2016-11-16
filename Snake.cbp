@@ -46,12 +46,6 @@
 		<Unit filename="game.h">
 			<Option target="Debug" />
 		</Unit>
-		<Unit filename="linked_list.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="linked_list.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -59,6 +53,12 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="output.h" />
+		<Unit filename="snakeList.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="snakeList.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="snakePart.c">
 			<Option compilerVar="CC" />
 			<Option target="Debug" />
@@ -66,6 +66,10 @@
 		<Unit filename="snakePart.h">
 			<Option target="Debug" />
 		</Unit>
+		<Unit filename="testAdrien.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="testAdrien.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
