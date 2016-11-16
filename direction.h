@@ -14,6 +14,6 @@ typedef struct direction {
     int y;
 } direction;
 
-direction * newDirection(int dir);
+direction * setNewDirection(int dir);
 
 #endif // DIRECTION_H_INCLUDED

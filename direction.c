@@ -3,7 +3,7 @@
 
 #include "direction.h"
 
-direction* newDirection(int dir){
+direction* setNewDirection(int dir){
       /*Creates the direction */
     direction *toReturn = NULL;
     toReturn = malloc(sizeof(direction));

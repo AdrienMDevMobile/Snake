@@ -47,6 +47,10 @@ snakeList * moveList(snakeList *list);
 //Later
 void deletesnakeList(snakeList *list);
 
+/* Change the direction the snake is going. It will apply to the next time, the Snake moves
+Will use the static int north, south, east, west from direction.h */
+snakeList * changeDirection(snakeList *list, int newDirection);
+
 //TODO int getDirection(snakeList *list);
 
 #endif // snakeList_H_INCLUDED

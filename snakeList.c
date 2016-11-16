@@ -23,7 +23,7 @@ snakeList * createList(int x, int y, int direction, int speed){
 
     /* Initialize the direction, the speed, the countdown, the growth of the snake */
     toReturn->speed = speed;
-    toReturn->direction = newDirection(direction);
+    toReturn->direction = setNewDirection(direction);
     toReturn->countdown = speed;
     toReturn->growth = 4;
 
@@ -87,6 +87,11 @@ snakeList * moveList(snakeList *list){
     return list;
 }
 
+
+snakeList * changeDirection(snakeList *list, int newDirection) {
+    list->direction = setNewDirection(newDirection);
+    return list;
+}
 /*
 direction * getDirection(snakeList *list){
     return list->direction;

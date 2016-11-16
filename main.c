@@ -14,7 +14,7 @@
 int main()
 {
     srand(time(NULL)); //Creates the randomness inside the program
-    //testCreationSnake();
+    testCreationSnake();
 
     //APPLE TEST
     /*
