@@ -7,7 +7,7 @@ direction* setNewDirection(int dir){
       /*Creates the direction */
     direction *toReturn = NULL;
     toReturn = malloc(sizeof(direction));
-    if (toReturn == NULL){exit(0);} /* Alocation failed */
+    if (toReturn == NULL){exit(0);} /* Allocation failed */
 
     if(dir == north){
         toReturn->x = 0;

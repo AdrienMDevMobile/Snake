@@ -51,6 +51,10 @@ void deletesnakeList(snakeList *list);
 Will use the static int north, south, east, west from direction.h */
 snakeList * changeDirection(snakeList *list, int newDirection);
 
+/* Getters of the head coordinates */
+int get_snake_x(snakeList *snake);
+int get_snake_y(snakeList *snake);
+
 //TODO int getDirection(snakeList *list);
 
 #endif // snakeList_H_INCLUDED

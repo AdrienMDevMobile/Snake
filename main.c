@@ -24,6 +24,9 @@ int main()
     //testInput();
 
     //OUTPUT TEST
-    createMapTest();
+    //create_test_map();
+
+    //GAME TEST
+    launch_game(0,0,3,0);
 }
 

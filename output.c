@@ -3,11 +3,11 @@
 //Move the cursor on one
 void gotoligcol( int lig, int col ) {
        // ressources
-       /*COORD mycoord;
+       COORD mycoord;
 
        mycoord.X = col;
        mycoord.Y = lig;
-       SetConsoleCursorPosition( GetStdHandle( STD_OUTPUT_HANDLE ), mycoord );*/
+       SetConsoleCursorPosition( GetStdHandle( STD_OUTPUT_HANDLE ), mycoord );
 }
 
 //A TERME, CETTE FONCTION DOIT AVOIR UN TABLEAU DE CARACTERES EN PARAMETRE
@@ -30,7 +30,7 @@ void print_map(char **map, int map_size) {
 }
 
 //JUSTE UNE FONCTION DE TEST LE TEMPS D'AVOIR LE TABLEAU
-char** create_test_map() {
+void create_test_map() {
 
     //TEST DE TABLEAU POUR LA MAP
     char** map = (char**)malloc(ROWS*sizeof(char*));
@@ -63,6 +63,6 @@ char** create_test_map() {
         printf("\n");
     }*/
 
+    print_map(map, sizeof(map));
 
-    return map;
 }

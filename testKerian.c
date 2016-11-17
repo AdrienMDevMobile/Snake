@@ -47,13 +47,3 @@ void testInput() {
         //gotoligcol(snake->x, snake->y);
     }
 }
-
-void createMapTest() {
-    char** map;
-
-    map = create_test_map();
-
-    int size = sizeof(map);
-
-    print_map(map, size);
-}

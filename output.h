@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 
 //A REMPLACER LORSQUE LA MAP SERA FAITE
 #define ROWS 50
@@ -11,6 +12,6 @@
 void gotoligcol( int lig, int col );
 
 void print_map(char **map, int map_size);
-char** create_test_map();
+void create_test_map();
 
 #endif

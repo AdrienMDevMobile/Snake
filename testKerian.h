@@ -15,7 +15,6 @@
 
 void testCreationApple();
 void testInput();
-void createMapTest();
 
 #endif // TEST_KERIAN_H ENDS
 
