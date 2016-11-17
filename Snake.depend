@@ -221,7 +221,7 @@
 	<stdlib.h>
 	"snakePart.h"
 
-1479310291 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\direction.c
+1479379172 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\direction.c
 	<stdio.h>
 	<stdlib.h>
 	"direction.h"
@@ -230,7 +230,7 @@
 	<stdio.h>
 	<stdlib.h>
 
-1479378310 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\game.c
+1479379191 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\game.c
 	<stdio.h>
 	<stdlib.h>
 	"game.h"

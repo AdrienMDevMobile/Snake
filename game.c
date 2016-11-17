@@ -27,7 +27,6 @@ void launch_game(int walls_on, int borders_on, int start_speed, int increasing_s
                 case KEY_LEFT: changeDirection(snake, west); break;
                 case KEY_RIGHT: changeDirection(snake, east); break;
             }
-            printf("%d", snake->direction);
         }
 
         int canMove = shouldMove(snake, snake->countdown);
@@ -40,6 +39,7 @@ void launch_game(int walls_on, int borders_on, int start_speed, int increasing_s
             //Makes the snake move
             snake = moveList(snake);
             gotoligcol(get_snake_x(snake), get_snake_y(snake));
+            printf("#");
         }
     }
 }

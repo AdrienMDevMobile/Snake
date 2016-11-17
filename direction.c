@@ -29,3 +29,22 @@ direction* setNewDirection(int dir){
 
     return toReturn;
 }
+
+int getDirection(direction *snakeDirection) {
+    int direction = 0;
+
+    if(snakeDirection->x == 0 && snakeDirection->y == 1){
+        direction = north;
+    }
+    else if(snakeDirection->x == 1 && snakeDirection->y == 0){
+        direction = east;
+    }
+    else if(snakeDirection->x == 0 && snakeDirection->y == -1){
+        direction = south;
+    }
+    else if(snakeDirection->x == -1 && snakeDirection->y == 0){
+        direction = west;
+    }
+
+    return direction;
+}
