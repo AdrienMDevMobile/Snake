@@ -21,6 +21,9 @@ int main()
     //testCreationApple();
 
     //INPUT TEST
-    testInput();
+    //testInput();
+
+    //OUTPUT TEST
+    createMapTest();
 }
 
