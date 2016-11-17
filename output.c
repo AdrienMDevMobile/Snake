@@ -34,7 +34,8 @@ void create_test_map() {
 
     //TEST DE TABLEAU POUR LA MAP
     char** map = (char**)malloc(ROWS*sizeof(char*));
-    for(int i = 0; i<ROWS; i++)
+    int i;
+    for(i = 0; i<ROWS; i++)
         map[i] = (char*)malloc(COLS*sizeof(char));
 
     int num_cols = COLS;

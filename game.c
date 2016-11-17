@@ -7,7 +7,7 @@ void launch_game(int walls_on, int borders_on, int start_speed, int increasing_s
     create_test_map();
 
     //Creates the snake in data and outputs it
-    snakeList* snake = createList(5,5,south,start_speed);
+    snakeList* snake = createSnakeList(5,5,south,start_speed);
     gotoligcol(get_snake_x(snake), get_snake_y(snake));
     printf("#");
 

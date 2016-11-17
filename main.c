@@ -10,6 +10,8 @@
 #include "direction.h"
 #include "input_functions.h"
 #include "board.h"
+#include "game.h"
+#include "testAdrien.h"
 
 
 int main()
@@ -31,5 +33,7 @@ int main()
 
     //GAME TEST
     launch_game(0,0,3,0);
+
+    return 1;
 }
 
