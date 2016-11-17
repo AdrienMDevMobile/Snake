@@ -31,7 +31,7 @@ typedef struct snakeList
 } snakeList;
 
 
-snakeList * createList(int x, int y, int direction, int speed);
+snakeList * createSnakeList(int x, int y, int direction, int speed);
 //TODO
 void addPartToList(snakeList *list, int x, int y);
 

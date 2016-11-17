@@ -8,7 +8,7 @@
 /*
 Create the linked list
 Contains five parts    */
-snakeList * createList(int x, int y, int direction, int speed){
+snakeList * createSnakeList(int x, int y, int direction, int speed){
 
     /*Creates the list */
     snakeList *toReturn = NULL;

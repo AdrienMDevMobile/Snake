@@ -12,7 +12,9 @@
 #include "snakeList.h"
 #include "direction.h"
 #include "input_functions.h"
+#include "board.h"
 
 void testCreationSnake();
+void testCreationTable();
 
 #endif // TEST_ADRIEN_H ENDS

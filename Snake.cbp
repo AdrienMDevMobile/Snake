@@ -35,6 +35,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="apple.h" />
+		<Unit filename="board.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="board.h" />
 		<Unit filename="direction.c">
 			<Option compilerVar="CC" />
 		</Unit>

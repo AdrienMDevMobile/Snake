@@ -23,7 +23,7 @@ void testCreationApple() {
 
 void testInput() {
 
-    snakeList *snake = createList(1, 1, south, 4);
+    snakeList *snake = createSnakeList(1, 1, south, 4);
     while(1) {
 
         if(_kbhit()) {

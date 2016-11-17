@@ -9,11 +9,14 @@
 #include "snakeList.h"
 #include "direction.h"
 #include "input_functions.h"
+#include "board.h"
 
 
 int main()
 {
     srand(time(NULL)); //Creates the randomness inside the program
+
+    testCreationTable();
 
     //testCreationSnake();
 
