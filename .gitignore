@@ -1,2 +1,6 @@
 *.exe
 *.o
+bin/Debug/Snake.exe
+bin/Debug/Snake.exe
+obj/Debug/output.o
+Snake.depend
