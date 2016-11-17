@@ -87,6 +87,15 @@ snakeList * moveList(snakeList *list){
     return list;
 }
 
+//Get the coordonates of the head
+int get_snake_x(snakeList *snake) {
+    return snake->snakeHead->x;
+}
+
+int get_snake_y(snakeList *snake) {
+    return snake->snakeHead->y;
+}
+
 
 snakeList * changeDirection(snakeList *list, int newDirection) {
     list->direction = setNewDirection(newDirection);

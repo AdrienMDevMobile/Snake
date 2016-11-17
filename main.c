@@ -24,6 +24,12 @@ int main()
     //testCreationApple();
 
     //INPUT TEST
-    testInput();
+    //testInput();
+
+    //OUTPUT TEST
+    //create_test_map();
+
+    //GAME TEST
+    launch_game(0,0,3,0);
 }
 

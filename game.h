@@ -9,6 +9,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "output.h"
+#include "snakePart.h"
+#include "snakeList.h"
+#include "input_functions.h"
 
 typedef struct game
 {

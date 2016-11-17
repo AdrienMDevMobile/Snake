@@ -7,7 +7,7 @@ direction* setNewDirection(int dir){
       /*Creates the direction */
     direction *toReturn = NULL;
     toReturn = malloc(sizeof(direction));
-    if (toReturn == NULL){exit(0);} /* Alocation failed */
+    if (toReturn == NULL){exit(0);} /* Allocation failed */
 
     if(dir == north){
         toReturn->x = 0;
@@ -28,4 +28,23 @@ direction* setNewDirection(int dir){
     else { return NULL; }
 
     return toReturn;
+}
+
+int getDirection(direction *snakeDirection) {
+    int direction = 0;
+
+    if(snakeDirection->x == 0 && snakeDirection->y == 1){
+        direction = north;
+    }
+    else if(snakeDirection->x == 1 && snakeDirection->y == 0){
+        direction = east;
+    }
+    else if(snakeDirection->x == 0 && snakeDirection->y == -1){
+        direction = south;
+    }
+    else if(snakeDirection->x == -1 && snakeDirection->y == 0){
+        direction = west;
+    }
+
+    return direction;
 }
