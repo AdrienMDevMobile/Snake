@@ -2,7 +2,7 @@
 
 void testCreationSnake()
 {
-    snakeList *test = createSnakeList(1, 1, north, 4);
+    snakeList *test = createSnakeList(1, 1, north, 5);
     //    addSnakePartToList(test, createSnakePart(1, 2));
     printf("testb \n");
 
@@ -16,14 +16,24 @@ void testCreationSnake()
 
             if(8 == i){
                 changeDirection(test, east);
+                changeSpeed(test, test->speed-1);
+                printf(" speed :%d ", test->speed);
             }
 
             if(11 == i){
                 changeDirection(test, south);
+                changeSpeed(test, test->speed-1);
+                printf(" speed :%d ", test->speed);
+
+
             }
 
             if(14 == i){
                 changeDirection(test, west);
+                changeSpeed(test, test->speed-1);
+                printf(" speed :%d ", test->speed);
+
+
             }
 
         printf("\n Direction=%d ", getDirection(test->direction));
@@ -44,7 +54,7 @@ void testCreationSnake()
 }
 
 void testCreationTable(){
-    board *test=initBoard();
+    board *test=initBoard(0);
 
     int y=0;
     while(y < constHeight){

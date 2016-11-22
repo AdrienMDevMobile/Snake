@@ -1,6 +1,6 @@
 #include "board.h"
 
-board * initBoard(){
+board * initBoard(int doAddWall){
     /*Creates the board */
     board *toReturn=NULL;
     toReturn = malloc(sizeof(board));
@@ -19,6 +19,12 @@ board * initBoard(){
         ++y;
     }
 
+    if(doAddWall) return addWall(toReturn);
+    else return toReturn;
+}
+
+
+board * addWall(board * toReturn){
     /*TODO : Recuperer un tableau dans un fichier pour le charger */
     toReturn->boardTable[5][5] = '#';
     toReturn->boardTable[12][15] = '#';

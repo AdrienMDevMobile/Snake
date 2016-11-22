@@ -7,7 +7,8 @@
 #include "snakePart.h"
 #include "direction.h"
 
-//TODO : Limit snake speed
+//Multiplier = multiplier of the speed to get the number of frames that the snake must wait before moving.
+static int const multiplier=100000000;
 
 typedef struct snakeList
 {
@@ -20,11 +21,15 @@ typedef struct snakeList
     struct snakePart *snakeHead;
 
     /*
-    Speed : the speed in which the snake moves (4=slowest, 0=fastest)
+    Speed : the speed in which the snake moves (5=slowest, 1=fastest)
+    */
+    int speed;
+
+    /*
     Countdown : decreases each frames, when it hits 0, the snake moves and the value resets
     Growth : by how many parts, must the snake move.
     */
-    int speed, countdown, growth;
+    int countdown, growth;
 
     /*    Direction : the direction (struct with x and y) */
     struct direction *direction;
@@ -50,6 +55,7 @@ void deletesnakeList(snakeList *list);
 /* Change the direction the snake is going. It will apply to the next time, the Snake moves
 Will use the static int north, south, east, west from direction.h */
 snakeList * changeDirection(snakeList *list, int newDirection);
+snakeList * changeSpeed(snakeList *list, int newSpeed);
 
 /* Getters of the head coordinates */
 int get_snake_x(snakeList *snake);

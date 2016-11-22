@@ -11,7 +11,7 @@ direction* setNewDirection(int dir){
 
     if(dir == north){
         toReturn->x = 0;
-        toReturn->y = 1;
+        toReturn->y = -1;
     }
     else if(dir == east){
         toReturn->x = 1;
@@ -19,7 +19,7 @@ direction* setNewDirection(int dir){
     }
     else if(dir == south){
         toReturn->x = 0;
-        toReturn->y = -1;
+        toReturn->y = 1;
     }
     else if(dir == west){
         toReturn->x = -1;
