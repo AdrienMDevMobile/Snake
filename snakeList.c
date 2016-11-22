@@ -49,12 +49,12 @@ int getLength(snakeList *list){
 }
 
 int shouldMove(snakeList *list, int * countdown){
-    if(countdown == 0) {
+    if(*countdown == 0) {
         *countdown = list->speed;
         return 1;
     }
     else {
-       *countdown--;
+       (*countdown)--;
         return 0;
     }
 }
@@ -101,8 +101,4 @@ snakeList * changeDirection(snakeList *list, int newDirection) {
     list->direction = setNewDirection(newDirection);
     return list;
 }
-/*
-direction * getDirection(snakeList *list){
-    return list->direction;
-}
-*/
+

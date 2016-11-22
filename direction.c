@@ -48,3 +48,4 @@ int getDirection(direction *snakeDirection) {
 
     return direction;
 }
+

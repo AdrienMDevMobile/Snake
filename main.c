@@ -18,9 +18,9 @@ int main()
 {
     srand(time(NULL)); //Creates the randomness inside the program
 
-    testCreationTable();
+    //testCreationTable();
 
-    //testCreationSnake();
+    testCreationSnake();
 
     //APPLE TEST
     //testCreationApple();
@@ -32,7 +32,7 @@ int main()
     //create_test_map();
 
     //GAME TEST
-    launch_game(0,0,3,0);
+//    launch_game(0,0,3,0);
 
     return 1;
 }

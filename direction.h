@@ -15,5 +15,6 @@ typedef struct direction {
 } direction;
 
 direction * setNewDirection(int dir);
+int getDirection(direction *snakeDirection);
 
 #endif // DIRECTION_H_INCLUDED

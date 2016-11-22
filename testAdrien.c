@@ -2,7 +2,6 @@
 
 void testCreationSnake()
 {
-    printf("testa");
     snakeList *test = createSnakeList(1, 1, north, 4);
     //    addSnakePartToList(test, createSnakePart(1, 2));
     printf("testb \n");
@@ -10,30 +9,31 @@ void testCreationSnake()
     printf("%d",test->length);
 
     int i = 1;
-    while(i<17){
-        moveList(test);
-        i++;
+    while(i<20){
+        if(shouldMove(test, &(test->countdown))){
+            moveList(test);
+            i++;
 
-        if(8 == i){
-            changeDirection(test, east);
+            if(8 == i){
+                changeDirection(test, east);
+            }
+
+            if(11 == i){
+                changeDirection(test, south);
+            }
+
+            if(14 == i){
+                changeDirection(test, west);
+            }
+
+        printf("\n Direction=%d ", getDirection(test->direction));
+
+        snakePart * tmp = test->snakeTail;
+        while(tmp != NULL){
+            printf(" %d %d ",tmp->x, tmp->y);
+            tmp = tmp->nextSnakePart;
         }
-
-        if(11 == i){
-            changeDirection(test, south);
-        }
-
-        if(14 == i){
-            changeDirection(test, west);
-        }
-
-    printf("testc \n");
-
-    snakePart * tmp = test->snakeTail;
-    while(tmp != NULL){
-        printf(" %d %d ",tmp->x, tmp->y);
-        tmp = tmp->nextSnakePart;
     }
-
     }
 
 

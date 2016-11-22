@@ -26,7 +26,7 @@ typedef struct snakeList
     */
     int speed, countdown, growth;
 
-    /*   Direction : the direction (struct with x and y) */
+    /*    Direction : the direction (struct with x and y) */
     struct direction *direction;
 } snakeList;
 
@@ -54,7 +54,5 @@ snakeList * changeDirection(snakeList *list, int newDirection);
 /* Getters of the head coordinates */
 int get_snake_x(snakeList *snake);
 int get_snake_y(snakeList *snake);
-
-//TODO int getDirection(snakeList *list);
 
 #endif // snakeList_H_INCLUDED

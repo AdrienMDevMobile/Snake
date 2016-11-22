@@ -5,3 +5,9 @@ bin/Debug/Snake.exe
 obj/Debug/output.o
 Snake.depend
 bin/Debug/Snake.exe
+bin/Debug/Snake.exe
+obj/Debug/main.o
+obj/Debug/snakeList.o
+obj/Debug/testAdrien.o
+Snake.depend
+Snake.layout
