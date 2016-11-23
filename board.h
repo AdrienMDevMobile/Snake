@@ -18,7 +18,7 @@ static int const constLength=50;
 static int const constHeight=60;
 
 typedef struct board {
-    char boardTable[60][50];
+    char** boardTable;
 } board;
 
 //Creates a new board

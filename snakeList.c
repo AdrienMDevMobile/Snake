@@ -49,7 +49,7 @@ int getLength(snakeList *list){
 }
 
 int shouldMove(snakeList *list, int * countdown){
-    if(*countdown == 0) {
+    if(*countdown <= 0) {
         *countdown = list->speed*multiplier;
         return 1;
     }

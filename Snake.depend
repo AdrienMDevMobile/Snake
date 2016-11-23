@@ -226,21 +226,23 @@
 	<stdlib.h>
 	"snakePart.h"
 
-1479379172 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\direction.c
+1479828813 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\direction.c
 	<stdio.h>
 	<stdlib.h>
 	"direction.h"
 
-1479310291 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\direction.h
+1479828745 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\direction.h
 	<stdio.h>
 	<stdlib.h>
 
-1479379191 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\game.c
+1479915529 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\game.c
 	<stdio.h>
 	<stdlib.h>
 	"game.h"
+	"board.h"
+	"output.h"
 
-1479376780 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\game.h
+1479911513 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\game.h
 	<stdio.h>
 	<stdlib.h>
 	"output.h"
@@ -248,7 +250,7 @@
 	"snakeList.h"
 	"input_functions.h"
 
-1478951925 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\snakepart.h
+1479828745 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\snakepart.h
 	<stdio.h>
 	<stdlib.h>
 
@@ -258,7 +260,7 @@
 	"snakePart.h"
 	"direction.h"
 
-1478951925 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\snakepart.c
+1479828745 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\snakepart.c
 	<stdio.h>
 	<stdlib.h>
 	"snakePart.h"
@@ -269,7 +271,7 @@
 	"linked_list.h"
 	"direction.h"
 
-1479376382 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\main.c
+1479910724 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -280,23 +282,27 @@
 	"snakeList.h"
 	"direction.h"
 	"input_functions.h"
+	"board.h"
+	"game.h"
+	"testAdrien.h"
 
-1479376463 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\output.h
+1479914699 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\output.h
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
+	"board.h"
 
-1479220328 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\input_functions.h
+1479828745 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\input_functions.h
 	<stdio.h>
 	<stdlib.h>
 
-1479376436 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\output.c
+1479915552 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\output.c
 	"output.h"
 
-1479220155 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\apple.c
+1479828745 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\apple.c
 	"apple.h"
 
-1479220171 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\apple.h
+1479828746 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\apple.h
 	<stdio.h>
 	<stdlib.h>
 
@@ -352,22 +358,22 @@
 	"input_functions.h"
 	"board.h"
 
-1479377979 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\snakelist.h
+1479911891 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\snakelist.h
 	<stdio.h>
 	<stdlib.h>
 	"snakePart.h"
 	"direction.h"
 
-1479377780 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\snakelist.c
+1479911714 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\snakelist.c
 	<stdio.h>
 	<stdlib.h>
 	"snakeList.h"
 	"direction.h"
 
-1479310291 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\testadrien.c
+1479910677 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\testadrien.c
 	"testAdrien.h"
 
-1479310291 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\testadrien.h
+1479828746 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\testadrien.h
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -378,11 +384,22 @@
 	"snakeList.h"
 	"direction.h"
 	"input_functions.h"
+	"board.h"
 
-1479376198 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\testkerian.c
+1479828746 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\testkerian.c
 	"testKerian.h"
 
-1479376203 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\testkerian.h
+1479828746 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\testkerian.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<windows.h>
+	"output.h"
+	"apple.h"
+	"snakePart.h"
+	"snakeList.h"
+	"direction.h"
+	"input_functions.h"
 
 1479379236 c:\users\adrien\desktop\programmation\snake\board.h
 	<stdio.h>
@@ -405,5 +422,13 @@
 	"input_functions.h"
 
 1479379146 source:c:\users\adrien\desktop\programmation\snake\board.c
+	"board.h"
+
+1479915303 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\board.h
+	<stdio.h>
+	<stdlib.h>
+	"snakeList.h"
+
+1479915478 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\board.c
 	"board.h"
 

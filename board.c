@@ -6,21 +6,31 @@ board * initBoard(int doAddWall){
     toReturn = malloc(sizeof(board));
     if (toReturn == NULL){exit(0);} /* Alocation failed */
 
+    char** tab = (char**)malloc(constHeight*sizeof(char*));
+    for(int i=0;i<constHeight;i++)
+        tab[i]=(char*)malloc(constLength*sizeof(char));
    /* toReturn->boardTable = toReturn = malloc(sizeof(char[constLength][constHeight]));
     if (toReturn->boardTable == NULL){exit(0);} /* Alocation failed */
 
     int y=0;
     while(y < constHeight){
-            int x = 0;
+        int x = 0;
         while(x<constLength){
-             toReturn->boardTable[y][x] = ' ';
+             //toReturn->boardTable[y][x] = ' ';
+             if(y == constHeight-1 || y == 0 || x == 0 || x == constLength-1) {
+                tab[y][x] = '#';
+             } else {
+                tab[y][x] = ' ';
+             }
              ++x;
         }
         ++y;
     }
 
-    if(doAddWall) return addWall(toReturn);
-    else return toReturn;
+    board* res = (board*)malloc(sizeof(board));
+    res->boardTable = tab;
+   // if(doAddWall) return addWall(toReturn);
+    return toReturn;
 }
 
 

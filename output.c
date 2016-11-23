@@ -11,11 +11,13 @@ void gotoligcol( int lig, int col ) {
 }
 
 //A TERME, CETTE FONCTION DOIT AVOIR UN TABLEAU DE CARACTERES EN PARAMETRE
-void print_map(char **map, int map_size) {
+void print_map(board* map) {
 
     //Get number of columns and rows
     int num_rows = ROWS;
     int num_cols = COLS;
+
+    char** table = map->boardTable;
 
     //Iterators of the map for columns and rows
     int row_iterator_map;
@@ -23,7 +25,7 @@ void print_map(char **map, int map_size) {
 
     for(col_iterator_map = 0; col_iterator_map<num_cols; col_iterator_map++) {
         for(row_iterator_map = 0; row_iterator_map<num_rows; row_iterator_map++) {
-            printf("%c ", map[row_iterator_map][col_iterator_map]);
+            printf("%c ", table[col_iterator_map][row_iterator_map]);
         }
         printf("\n");
     }
@@ -64,6 +66,6 @@ void create_test_map() {
         printf("\n");
     }*/
 
-    print_map(map, sizeof(map));
+    //print_map(map, sizeof(map));
 
 }
