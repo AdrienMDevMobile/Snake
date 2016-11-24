@@ -21,5 +21,6 @@ typedef struct game
 
 void launch_game(int walls_on, int borders_on, int start_speed, int increasing_speed_on);//TODO: Ajouter la vue en paramètre//
 struct snakeList init_snake(char game_map[62][52]);
+int canMove(snakeList *snake, board *map);
 
 #endif

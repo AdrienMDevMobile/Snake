@@ -30,4 +30,6 @@ char readSquare(board * currentBoard, int x, int y);
 
 board * addWall(board * toReturn);
 
+int setElementAtPosition(board *table, char element, int position_x, int position_y);
+
 #endif // BOARD_H_INCLUDED

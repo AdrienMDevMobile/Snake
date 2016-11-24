@@ -25,7 +25,7 @@ void print_map(board* map) {
 
     for(col_iterator_map = 0; col_iterator_map<num_cols; col_iterator_map++) {
         for(row_iterator_map = 0; row_iterator_map<num_rows; row_iterator_map++) {
-            printf("%c ", table[col_iterator_map][row_iterator_map]);
+            printf("%c", table[col_iterator_map][row_iterator_map]);
         }
         printf("\n");
     }

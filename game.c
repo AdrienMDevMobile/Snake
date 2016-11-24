@@ -11,8 +11,8 @@ void launch_game(int walls_on, int borders_on, int start_speed, int increasing_s
     //create_test_map(map);
 
     //Creates the snake in data and outputs it
-    snakeList* snake = createSnakeList(1,1,west,start_speed);
-    gotoligcol(get_snake_x(snake), get_snake_y(snake));
+    snakeList* snake = createSnakeList(1,5,west,start_speed);
+    gotoligcol(get_snake_y(snake), get_snake_x(snake));
     printf("#");
 
     int old_position_x, old_position_y;
@@ -44,11 +44,24 @@ void launch_game(int walls_on, int borders_on, int start_speed, int increasing_s
             //Gets back to where the snake was
             gotoligcol(old_position_y, old_position_x);
             printf(" ");
+            setElementAtPosition(map, ' ', old_position_x, old_position_y);
 
             //Makes the snake move
             snake = moveList(snake);
-            gotoligcol(get_snake_y(snake), get_snake_x(snake));
-            printf("#");
+            if(setElementAtPosition(map, '#', get_snake_x(snake), get_snake_y(snake))) {
+                gotoligcol(get_snake_y(snake), get_snake_x(snake));
+                printf("#");
+
+                if(setElementAtPosition(map, ' ', snake->snakeTail->x, snake->snakeTail->y)) {
+                    gotoligcol(snake->snakeTail->y, snake->snakeTail->x);
+                    printf(" ");
+                } else {
+                    printf("Oho...");
+                }
+
+            } else {
+                printf("Oho...");
+            }
         }
     }
 }
@@ -58,9 +71,7 @@ int canMove(snakeList *snake, board *map) {
     int position_x = get_snake_x(snake);
     int position_y = get_snake_y(snake);
     direction *dir = snake->direction;
-    char nextSquare = readSquare(map, position_x-(dir->x), position_y-(dir->y));
-    printf("%d", nextSquare);
-    getch();
+    char nextSquare = readSquare(map, position_x+(dir->x), position_y+(dir->y));
 
     if(nextSquare != 35 && shouldMove(snake, &(snake->countdown)) ) {
         canMove = 1;

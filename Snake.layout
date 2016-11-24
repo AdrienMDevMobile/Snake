@@ -2,34 +2,9 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="direction.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="direction.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="475" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="apple.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="testAdrien.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="snakePart.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1013" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="board.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="828" topLine="5" />
-		</Cursor>
-	</File>
-	<File name="testAdrien.c" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1284" topLine="44" />
+			<Cursor1 position="241" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="testKerian.c" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -37,19 +12,54 @@
 			<Cursor1 position="305" topLine="22" />
 		</Cursor>
 	</File>
-	<File name="board.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="direction.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="489" topLine="6" />
-		</Cursor>
-	</File>
-	<File name="snakeList.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="875" topLine="9" />
+			<Cursor1 position="361" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="apple.c" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="101" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="output.c" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="799" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="testAdrien.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="379" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="snakeList.c" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1600" topLine="65" />
+		</Cursor>
+	</File>
+	<File name="game.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1850" topLine="36" />
+		</Cursor>
+	</File>
+	<File name="game.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="583" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="snakePart.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1013" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="testAdrien.c" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1284" topLine="44" />
 		</Cursor>
 	</File>
 	<File name="testKerian.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -62,39 +72,29 @@
 			<Cursor1 position="875" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="board.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="780" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="apple.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="output.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="133" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="main.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="board.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="379" topLine="12" />
+			<Cursor1 position="1861" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="game.c" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="snakeList.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1977" topLine="3" />
-		</Cursor>
-	</File>
-	<File name="output.c" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="887" topLine="12" />
-		</Cursor>
-	</File>
-	<File name="direction.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="241" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="snakeList.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2704" topLine="70" />
-		</Cursor>
-	</File>
-	<File name="game.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="74" topLine="0" />
+			<Cursor1 position="875" topLine="37" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

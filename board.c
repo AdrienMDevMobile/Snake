@@ -55,3 +55,13 @@ char readSquare(board * currentBoard, int x, int y){
     if(x > constLength || y > constHeight) return charEmptyBloc;
     return currentBoard->boardTable[y][x];
 }
+
+int setElementAtPosition(board *table, char element, int position_x, int position_y) {
+    int check_state = 1;
+
+    if(position_x < constLength && position_y < constHeight) {
+        table->boardTable[position_y][position_x] = element;
+    } else {
+        check_state = 0;
+    }
+}
