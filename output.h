@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+#include "board.h"
 
 //A REMPLACER LORSQUE LA MAP SERA FAITE
 #define ROWS 50
@@ -11,7 +12,7 @@
 
 void gotoligcol( int lig, int col );
 
-void print_map(char **map, int map_size);
+void print_map(board* map);
 void create_test_map();
 
 #endif

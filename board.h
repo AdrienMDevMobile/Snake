@@ -18,7 +18,7 @@ static int const constLength=50;
 static int const constHeight=60;
 
 typedef struct board {
-    char boardTable[60][50];
+    char** boardTable;
 } board;
 
 //Creates a new board
@@ -28,6 +28,7 @@ board * initBoard(int addWall);
 //Read a square in the board and returns what value is inside (following the norm defined above).
 char readSquare(board * currentBoard, int x, int y);
 
-board * addWall(board * toReturn);
+//Add walls from a file to the board
+board * addWall(board * toReturn, int numberTable);
 
 #endif // BOARD_H_INCLUDED

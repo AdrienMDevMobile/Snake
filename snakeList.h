@@ -8,7 +8,7 @@
 #include "direction.h"
 
 //Multiplier = multiplier of the speed to get the number of frames that the snake must wait before moving.
-static int const multiplier=100000000;
+static int const multiplier=600;
 
 typedef struct snakeList
 {
@@ -37,7 +37,7 @@ typedef struct snakeList
 
 
 snakeList * createSnakeList(int x, int y, int direction, int speed);
-//TODO
+/* Add a snakePart to the snakeList. That function is only used by createSnakeList and moveList */
 void addPartToList(snakeList *list, int x, int y);
 
 /*
@@ -45,11 +45,11 @@ Returns to the game if the snake should move this frame, then decreases the coun
 We also need to pass the pointer of the elements because we want to modify it.
 */
 int shouldMove(snakeList *list, int *countdown);
-//TODO
+/* Move the list */
 snakeList * moveList(snakeList *list);
 
 
-//Later
+/* Delete every sub element of the list and delete the list itself */
 void deletesnakeList(snakeList *list);
 
 /* Change the direction the snake is going. It will apply to the next time, the Snake moves

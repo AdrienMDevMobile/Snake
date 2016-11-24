@@ -54,7 +54,7 @@ void testCreationSnake()
 }
 
 void testCreationTable(){
-    board *test=initBoard(0);
+    board *test=initBoard(1);
 
     int y=0;
     while(y < constHeight){

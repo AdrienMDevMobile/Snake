@@ -2,11 +2,6 @@
 #define GAME_H_INCLUDED
 
 //CONSTANTS DEFINITIONS//
-#define NORTH 1
-#define EAST 2
-#define SOUTH 3
-#define WEST 4
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "output.h"

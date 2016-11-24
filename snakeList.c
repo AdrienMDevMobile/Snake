@@ -49,7 +49,7 @@ int getLength(snakeList *list){
 }
 
 int shouldMove(snakeList *list, int * countdown){
-    if(*countdown == 0) {
+    if(*countdown <= 0) {
         *countdown = list->speed*multiplier;
         return 1;
     }
@@ -67,6 +67,7 @@ snakeList * changeSpeed(snakeList *list, int newSpeed){
 
 snakeList * moveList(snakeList *list){
 
+    /* If growth > 0, the snake must extend by one part */
     if(list->growth > 0){
         snakePart* newPart = createSnakePartAfter(list->snakeHead->x + list->direction->x,
                              list->snakeHead->y + list->direction->y,
