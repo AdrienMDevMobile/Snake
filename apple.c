@@ -2,7 +2,7 @@
 #include "apple.h"
 
 //Initialization
-struct apple *init_apple() {
+struct apple *init_apple(board *table) {
     apple *toReturn = NULL;
 
     toReturn = malloc(sizeof(apple));
@@ -18,16 +18,31 @@ struct apple *init_apple() {
     //Choose a number between 0 and 100 and defines the apple_type
     int random_type = rand() % 100;
 
-    if(random_type > 90) {
-        toReturn->apple_type = 5;
-        toReturn->apple_char = SPECIAL_APPLE;
-        //Special apples can vanish after 10 moves by the snake
-        toReturn->countdown = 10;
+    int check_position = 0;
 
-    } else {
-        toReturn->apple_type = 1;
-        toReturn->apple_char = NORMAL_APPLE;
-        toReturn->countdown = -1;
+    while(!check_position) {
+
+        char nextSquare = readSquare(table, toReturn->pos_x, toReturn->pos_y);
+
+        if(nextSquare == 32) {
+            if(random_type > 90) {
+                toReturn->apple_type = 5;
+                toReturn->apple_char = SPECIAL_APPLE;
+                //Special apples can vanish after 10 moves by the snake
+                toReturn->countdown = 10;
+
+            } else {
+                toReturn->apple_type = 1;
+                toReturn->apple_char = NORMAL_APPLE;
+                toReturn->countdown = -1;
+            }
+
+            check_position = 1;
+
+        } else {
+            toReturn->pos_x = rand() % 50;
+            toReturn->pos_y = rand() % 60;
+        }
     }
 
     return toReturn;
@@ -68,11 +83,15 @@ void set_apple_pos_y(apple *currentApple, int y_to_set) {
 
 
 //----------------------FUNCTIONS OF APPLE---------------------//
-void decrease_countdown(apple *currentApple) {
+int decrease_countdown(apple *currentApple) {
     int countdown = currentApple->countdown;
     if(countdown > 0) {
         countdown--;
     }
+
+    currentApple->countdown = countdown;
+
+    return countdown;
 }
 
 void print_apple(apple *currentApple) {

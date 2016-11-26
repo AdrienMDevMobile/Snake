@@ -237,12 +237,13 @@
 	<stdio.h>
 	<stdlib.h>
 
-1479974459 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\game.c
+1479981975 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\game.c
 	<stdio.h>
 	<stdlib.h>
 	"game.h"
 	"board.h"
 	"output.h"
+	"apple.h"
 
 1479972003 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\game.h
 	<stdio.h>
@@ -301,12 +302,13 @@
 1479973935 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\output.c
 	"output.h"
 
-1479828745 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\apple.c
+1479982108 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\apple.c
 	"apple.h"
 
-1479828746 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\apple.h
+1479982107 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\apple.h
 	<stdio.h>
 	<stdlib.h>
+	"board.h"
 
 1479931012 source:c:\users\adrien\desktop\programmation\snake\apple.c
 	"apple.h"
@@ -389,7 +391,7 @@
 	"input_functions.h"
 	"board.h"
 
-1479828746 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\testkerian.c
+1479982587 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\testkerian.c
 	"testKerian.h"
 
 1479828746 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\testkerian.h
