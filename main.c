@@ -18,8 +18,7 @@ int main()
 {
     srand(time(NULL)); //Creates the randomness inside the program
 
-    //readWall();
-
+    //testCreationTable();
 
     //testCreationSnake();
 
@@ -33,8 +32,6 @@ int main()
     //create_test_map();
 
     //GAME TEST
-    //launch_game(0,0,3,0);
-
-    return 1;
+    launch_game(0,0,3,0);
 }
 

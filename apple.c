@@ -61,8 +61,8 @@ int get_apple_pos_y(apple *currentApple) {
     return currentApple->pos_y;
 }
 
-int get_apple_type(apple *currentApple) {
-    return currentApple->apple_type;
+char get_apple_type(apple *currentApple) {
+    return currentApple->apple_char;
 }
 
 int get_countdown(apple *currentApple) {
