@@ -29,6 +29,7 @@ board * initBoard(int addWall);
 char readSquare(board * currentBoard, int x, int y);
 
 //Add walls from a file to the board
+board * addWall(board * toReturn, int numberTable);
 
 int setElementAtPosition(board *table, char element, int position_x, int position_y);
 

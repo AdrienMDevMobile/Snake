@@ -25,7 +25,10 @@ direction* setNewDirection(int dir){
         toReturn->x = -1;
         toReturn->y = 0;
     }
-    else { return NULL; }
+    else {
+        toReturn->x = 0;
+        toReturn->y = 0;
+    }
 
     return toReturn;
 }
@@ -44,6 +47,8 @@ int getDirection(direction *snakeDirection) {
     }
     else if(snakeDirection->x == -1 && snakeDirection->y == 0){
         direction = west;
+    } else {
+        direction = none_dir;
     }
 
     return direction;

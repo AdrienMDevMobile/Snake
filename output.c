@@ -69,3 +69,20 @@ void create_test_map() {
     //print_map(map, sizeof(map));
 
 }
+
+void print_interface() {
+    gotoligcol(62,0);
+    printf("Score: 0");
+    gotoligcol(63,0);
+    printf("Lives: 3");
+}
+
+void update_score(int score) {
+    gotoligcol(62,7);
+    printf("%d", score);
+}
+
+void update_lives(int lives) {
+    gotoligcol(63,7);
+    printf("%d", lives);
+}

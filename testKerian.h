@@ -17,4 +17,3 @@ void testCreationApple();
 void testInput();
 
 #endif // TEST_KERIAN_H ENDS
-

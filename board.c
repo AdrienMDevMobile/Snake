@@ -29,10 +29,10 @@ board * initBoard(int doAddWall){
         ++y;
     }
 
-    board* res = (board*)malloc(sizeof(board));
-    res->boardTable = tab;
+    toReturn->boardTable = tab;
 
-    if(doAddWall) toReturn =  addWall(toReturn, 1);
+    if(doAddWall)
+        toReturn = addWall(toReturn, 1);
     return toReturn;
 }
 
@@ -44,9 +44,6 @@ board * addWall(board * toReturn, int numberTable){
     char num[2];
     sprintf(num, "%d", numberTable);
 
-
-    /*char *bob = {numberTable, '\0'};
-    printf("a"); */
     strcat(nameFile, "./table/table");
 
     strcat(nameFile, num);
@@ -65,14 +62,12 @@ board * addWall(board * toReturn, int numberTable){
             if(actualChar=='\n'){
                 y++;
                 x=0;
-                //printf("y: %d ", y);
             }
             else {
                 if(actualChar != ' '){
                     toReturn->boardTable[y][x] = actualChar;
                 }
                 x++;
-                //printf("x : %d ", x);
             }
 
         }

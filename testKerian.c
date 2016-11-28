@@ -1,6 +1,6 @@
 #include "testKerian.h"
 
-void testCreationApple() {
+/*void testCreationApple() {
 
     apple *apple = init_apple();
     print_apple(apple);
@@ -19,7 +19,7 @@ void testCreationApple() {
         }
     }
 
-}
+}*/
 
 void testInput() {
 
