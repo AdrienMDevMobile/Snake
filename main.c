@@ -32,6 +32,7 @@ int main()
     //create_test_map();
 
     //GAME TEST
-    launch_game(0,0,3,0);
+    game* game = init_game();
+    launch_game(1,0,3,0, game);
 }
 

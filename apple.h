@@ -26,7 +26,8 @@ struct apple *init_apple(board *table);
 int get_apple_pos_x(apple *currentApple);
 int get_apple_pos_y(apple *currentApple);
 
-char get_apple_type(apple *currentApple);
+int get_apple_type(apple *currentApple);
+char get_apple_char(apple *currentApple);
 
 int get_countdown(apple *currentApple);
 
@@ -35,7 +36,5 @@ void set_apple_pos_y(apple *currentApple, int y_to_set);
 
 //Define procedures to use the apple
 int decrease_countdown(apple *currentApple);
-
-void print_apple(apple *currentApple);
 
 #endif

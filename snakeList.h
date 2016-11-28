@@ -8,7 +8,7 @@
 #include "direction.h"
 
 //Multiplier = multiplier of the speed to get the number of frames that the snake must wait before moving.
-static int const multiplier=600;
+static int const multiplier=500;
 
 typedef struct snakeList
 {

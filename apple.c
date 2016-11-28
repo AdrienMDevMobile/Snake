@@ -61,7 +61,11 @@ int get_apple_pos_y(apple *currentApple) {
     return currentApple->pos_y;
 }
 
-char get_apple_type(apple *currentApple) {
+int get_apple_type(apple *currentApple) {
+    return currentApple->apple_type;
+}
+
+char get_apple_char(apple *currentApple) {
     return currentApple->apple_char;
 }
 
@@ -92,17 +96,4 @@ int decrease_countdown(apple *currentApple) {
     currentApple->countdown = countdown;
 
     return countdown;
-}
-
-void print_apple(apple *currentApple) {
-    printf("Position de la pomme : %d, %d\n", currentApple->pos_x, currentApple->pos_y);
-    printf("Countdown restant : %d\n", currentApple->countdown);
-    printf("Caractère de la pomme : %c\n", currentApple->apple_char);
-    int type = currentApple->apple_type;
-    if(type == 1) {
-        printf("Type de la pomme : Normale\n");
-
-    } else {
-        printf("Type de la pomme : Spéciale\n");
-    }
 }
