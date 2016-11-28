@@ -28,10 +28,13 @@ board * initBoard(int addWall);
 //Read a square in the board and returns what value is inside (following the norm defined above).
 char readSquare(board * currentBoard, int x, int y);
 
+<<<<<<< HEAD
 //Add walls from a file to the board
+board * addWall(board * toReturn, int numberTable);
+=======
+board * addWall(board * toReturn);
 
 int setElementAtPosition(board *table, char element, int position_x, int position_y);
-
-board * addWall(board * toReturn, int numberTable);
+>>>>>>> 6d3eee0e26e262b6f2bddad77ab2449e907e88ca
 
 #endif // BOARD_H_INCLUDED
