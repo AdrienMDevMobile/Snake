@@ -57,6 +57,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="output.h" />
+		<Unit filename="saving.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="saving.h" />
 		<Unit filename="snakeList.c">
 			<Option compilerVar="CC" />
 		</Unit>

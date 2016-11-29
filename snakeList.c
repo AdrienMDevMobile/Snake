@@ -109,3 +109,14 @@ snakeList * changeDirection(snakeList *list, int newDirection) {
     return list;
 }
 
+char * toString(snakeList *snake){
+    return NULL;
+}
+
+int getGrowth(snakeList *snake){
+    return snake->growth;
+}
+snakeList * setGrowth(snakeList *snake, int growth){
+    snake->growth = growth;
+    return snake;
+}

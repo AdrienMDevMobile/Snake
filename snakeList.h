@@ -61,4 +61,8 @@ snakeList * changeSpeed(snakeList *list, int newSpeed);
 int get_snake_x(snakeList *snake);
 int get_snake_y(snakeList *snake);
 
+char * toString(snakeList *snake);
+
+int getGrowth(snakeList *snake);
+snakeList * setGrowth(snakeList *snake, int growth);
 #endif // snakeList_H_INCLUDED

@@ -31,25 +31,36 @@ board * initBoard(int doAddWall){
 
     toReturn->boardTable = tab;
 
-    if(doAddWall)
-        toReturn = addWall(toReturn, 1);
+    if(doAddWall == 0){
+        printf("%i", doAddWall);
+         toReturn = addWall(toReturn, 1);
+    }
+
     return toReturn;
 }
 
-
 board * addWall(board * toReturn, int numberTable){
     FILE* file = NULL;
+    //If file is null, it is called by the add wall function.
+    //If it is not null, it is called by the load saved game function.
+
+
     char nameFile[80];
 
     char num[2];
     sprintf(num, "%d", numberTable);
 
-    strcat(nameFile, "./table/table");
+    strcat(nameFile, "./Table/table");
 
     strcat(nameFile, num);
     strcat (nameFile,".txt");
 
     file = fopen(nameFile, "r");
+
+    return loadBoard(toReturn, file);
+}
+
+board * loadBoard(board * toReturn, FILE * file){
 
     if (file != NULL)
     {

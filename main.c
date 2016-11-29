@@ -12,6 +12,7 @@
 #include "board.h"
 #include "game.h"
 #include "testAdrien.h"
+#include "saving.h"
 
 
 int main()
@@ -32,7 +33,11 @@ int main()
     //create_test_map();
 
     //GAME TEST
-    game* game = init_game();
+    //game* game = init_game(NULL, NULL, NULL);
+    game* game = readSaveFile();
     launch_game(1,0,3,0, game);
+
+    //readSaveFile();
+
 }
 

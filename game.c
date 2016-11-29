@@ -3,7 +3,7 @@
 
 #include "game.h"
 
-game* init_game() {
+game* init_game(snakeList * snake, board * map, int lives) {
     game *toReturn = NULL;
 
     toReturn = malloc(sizeof(game));
@@ -12,9 +12,14 @@ game* init_game() {
             exit(0);
         }
 
-    toReturn->snake = createSnakeList(2, 2, rand()%4, 3);
-    toReturn->game_map = initBoard(1);
-    toReturn->lives = 3;
+    if(snake == NULL)toReturn->snake = createSnakeList(2, 2, rand()%4, 3);
+    else toReturn->snake = snake;
+
+    if(NULL == map)toReturn->game_map = initBoard(1);
+    else toReturn->game_map = map;
+
+    if(NULL == lives)toReturn->lives = 3;
+    else toReturn->lives = lives;
 
     return toReturn;
 }
@@ -73,7 +78,8 @@ void launch_game(int walls_on, int borders_on, int start_speed, int increasing_s
                     setElementAtPosition(game->game_map, ' ', old_position_x+(game->snake->direction->x), old_position_y+(game->snake->direction->y));
 
                     //Adds as much part to the snake as needed
-                    for(int i = 0; i < get_apple_type(current_apple); i++) {
+                    int i;
+                    for(i = 0; i < get_apple_type(current_apple); i++) {
                         addPartToList(game->snake, game->snake->snakeTail->x, game->snake->snakeTail->y);
                     }
 
