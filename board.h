@@ -23,7 +23,7 @@ typedef struct board {
 
 //Creates a new board
 //addWall = boolean
-board * initBoard(int addWall);
+board * initBoard(int addWall, int addBoarder);
 
 //Read a square in the board and returns what value is inside (following the norm defined above).
 char readSquare(board * currentBoard, int x, int y);

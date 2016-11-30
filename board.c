@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "board.h"
 
-board * initBoard(int doAddWall){
+board * initBoard(int doAddWall, int addBorder){
     /*Creates the board */
     board *toReturn=NULL;
     toReturn = malloc(sizeof(board));
@@ -14,25 +14,26 @@ board * initBoard(int doAddWall){
         tab[i]=(char*)malloc(constLength*sizeof(char));
 
 
-    int y=0;
-    while(y < constHeight){
-        int x = 0;
-        while(x<constLength){
-             //toReturn->boardTable[y][x] = ' ';
-             if(y == constHeight-1 || y == 0 || x == 0 || x == constLength-1) {
+
+        int y=0;
+        while(y < constHeight){
+            int x = 0;
+            while(x<constLength){
+            //toReturn->boardTable[y][x] = ' ';
+            if((addBorder == 1) && (y == constHeight-1 || y == 0 || x == 0 || x == constLength-1)) {
                 tab[y][x] = '#';
-             } else {
+            } else {
                 tab[y][x] = ' ';
-             }
-             ++x;
+            }
+                ++x;
+            }
+                ++y;
         }
-        ++y;
-    }
+
 
     toReturn->boardTable = tab;
 
-    if(doAddWall == 0){
-        printf("%i", doAddWall);
+    if(doAddWall == 1){
          toReturn = addWall(toReturn, 1);
     }
 

@@ -16,5 +16,7 @@
 
 void testCreationSnake();
 void testCreationTable();
+void testCreationSave(board *test);
+void testCreationSaveSnake(snakeList *test);
 
 #endif // TEST_ADRIEN_H ENDS

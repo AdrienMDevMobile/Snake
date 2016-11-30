@@ -8,6 +8,6 @@
 #include "game.h"
 
 snakeList * readSaveSnake(FILE * file);
-game * readSaveFile();
 int readSaveLife(FILE * file);
+game * readSaveFile();
 #endif // snakeList_H_INCLUDED

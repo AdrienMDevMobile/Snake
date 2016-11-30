@@ -54,7 +54,7 @@ void testCreationSnake()
 }
 
 void testCreationTable(){
-    board * test=initBoard(1);
+    board * test=initBoard(1, 0);
 
     int y=0;
     while(y < constHeight){
@@ -68,4 +68,39 @@ void testCreationTable(){
     }
 
     printf("fin");
+}
+
+
+void testCreationSave(board * test){
+
+    int y=0;
+    while(y < constHeight){
+        int x=0;
+        while(x<constLength){
+             printf("%c", readSquare(test, x, y));
+             ++x;
+        }
+        printf("|\n");
+        ++y;
+    }
+
+    printf("fin");
+}
+
+void testCreationSaveSnake(snakeList *test)
+{
+    //    addSnakePartToList(test, createSnakePart(1, 2));
+    printf("testb \n");
+
+    printf("%d :",test->length);
+
+    int i = 1;
+
+        snakePart * tmp = test->snakeTail;
+        while(tmp != NULL){
+            printf(" %d %d ",tmp->x, tmp->y);
+            tmp = tmp->nextSnakePart;
+        }
+
+    return 0;
 }
