@@ -15,7 +15,7 @@ void gotoligcol( int lig, int col );
 void print_map(board* map);
 void create_test_map();
 
-void print_interface();
+void print_game_interface();
 
 void update_score(int score);
 void update_lives(int lives);

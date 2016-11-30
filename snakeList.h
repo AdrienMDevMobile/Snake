@@ -57,6 +57,10 @@ Will use the static int north, south, east, west from direction.h */
 snakeList * changeDirection(snakeList *list, int newDirection);
 snakeList * changeSpeed(snakeList *list, int newSpeed);
 
+/* Setters of the head coordinates */
+void set_snake_x(snakeList* snake, int pos_x);
+void set_snake_y(snakeList* snake, int pos_y);
+
 /* Getters of the head coordinates */
 int get_snake_x(snakeList *snake);
 int get_snake_y(snakeList *snake);
