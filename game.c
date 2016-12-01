@@ -26,7 +26,7 @@ game* init_game(snakeList * snake, board * map, int lives) {
 
 void launch_game(int walls_on, int borders_on, int start_speed, int increasing_speed_on, game* game) {
     print_map(game->game_map);
-    print_interface();
+    print_game_interface();
 
     //Creates the snake in data and outputs it
     gotoligcol(get_snake_y(game->snake), get_snake_x(game->snake));
@@ -35,7 +35,7 @@ void launch_game(int walls_on, int borders_on, int start_speed, int increasing_s
 
     //Creates an apple in data and outputs it. Keeps the old position of the snake and if the user chose to quit
     apple *current_apple = create_new_apple(game->game_map);
-    int old_position_x, old_position_y;
+    int old_position_x, old_position_y, next_pos_x, next_pos_y;
     int quit = 0;
     int score = 0;
     int lives = 3;
@@ -45,7 +45,6 @@ void launch_game(int walls_on, int borders_on, int start_speed, int increasing_s
 
         old_position_x = get_snake_x(game->snake);
         old_position_y = get_snake_y(game->snake);
-        char testlol3 = readSquare(game->game_map, 3, 4);
 
         if(_kbhit()) {
 
@@ -63,6 +62,9 @@ void launch_game(int walls_on, int borders_on, int start_speed, int increasing_s
             }
         }
 
+        next_pos_x = old_position_x+(game->snake->direction->x);
+        next_pos_y = old_position_y+(game->snake->direction->y);
+
         allowed_to_move = canMove(game->snake, game->game_map);
 
         if(allowed_to_move) {
@@ -70,12 +72,16 @@ void launch_game(int walls_on, int borders_on, int start_speed, int increasing_s
             if(shouldMove(game->snake, &(game->snake->countdown))) {
 
                 //Checks if the next square is an apple. If so, adds a part to the snake.
-                if(is_square_apple(game->game_map, old_position_x+(game->snake->direction->x), old_position_y+(game->snake->direction->y))) {
+                if(is_square_apple(game->game_map, next_pos_x, next_pos_y)) {
+
                     score += get_apple_type(current_apple);
                     update_score(score);
 
+                    //Update first, so we can take the direction in count
+                    update_snake_data_output(game);
+
                     //Erases the apple
-                    setElementAtPosition(game->game_map, ' ', old_position_x+(game->snake->direction->x), old_position_y+(game->snake->direction->y));
+                    setElementAtPosition(game->game_map, ' ', next_pos_x, next_pos_y);
 
                     //Adds as much part to the snake as needed
                     int i;
@@ -90,12 +96,32 @@ void launch_game(int walls_on, int borders_on, int start_speed, int increasing_s
                     //Outputs the new part of the snake
                     gotoligcol(get_snake_y(game->snake), get_snake_x(game->snake));
                     printf("#");
+
                 } else {
-                    //Makes the snake move
+                    if(next_pos_y >= ROWS) {
+                        next_pos_y = 0;
+                        set_snake_y(game->snake, next_pos_y);
+
+                    } else if(next_pos_y <= 0) {
+                        next_pos_y = ROWS;
+                        set_snake_y(game->snake, next_pos_y);
+
+                    } else if(next_pos_x >= COLS) {
+                        next_pos_x = 0;
+                        set_snake_x(game->snake, next_pos_x);
+
+                    } else if(next_pos_x <= 0) {
+                        next_pos_x = COLS;
+                        set_snake_x(game->snake, next_pos_x);
+                    }
+
+                    //Update first, so we can take the direction in count
+                    update_snake_data_output(game);
+
+                    //Makes the snake move: just changes its coordonates
                     moveList(game->snake);
                 }
 
-                update_snake_data_output(game);
             }
         } else if(getDirection(game->snake->direction) != none_dir) {
             changeDirection(game->snake, none_dir);
@@ -153,8 +179,10 @@ apple* create_new_apple(board *table) {
 }
 
 void update_snake_data_output(game* game) {
+    int next_pos_x = get_snake_x(game->snake)+(game->snake->direction->x);
+    int next_pos_y = get_snake_y(game->snake)+(game->snake->direction->y);
     //Puts the character in the data table, and checks if it really did
-    setElementAtPosition(game->game_map, '#', get_snake_x(game->snake), get_snake_y(game->snake));
+    setElementAtPosition(game->game_map, '#', next_pos_x, next_pos_y);
 
     //Sets the cursor where the snake will be and output a character
     gotoligcol(get_snake_y(game->snake), get_snake_x(game->snake));

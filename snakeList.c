@@ -94,6 +94,15 @@ snakeList * moveList(snakeList *list){
     return list;
 }
 
+//Set the coordonates of the head
+void set_snake_x(snakeList* snake, int pos_x) {
+    snake->snakeHead->x = pos_x;
+}
+
+void set_snake_y(snakeList* snake, int pos_y) {
+    snake->snakeHead->y = pos_y;
+}
+
 //Get the coordonates of the head
 int get_snake_x(snakeList *snake) {
     return snake->snakeHead->x;

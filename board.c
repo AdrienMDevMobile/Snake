@@ -24,11 +24,11 @@ board * initBoard(int doAddWall, int addBorder){
                 tab[y][x] = '#';
             } else {
                 tab[y][x] = ' ';
-            }
-                ++x;
-            }
-                ++y;
+             }
+             ++x;
         }
+        ++y;
+    }
 
 
     toReturn->boardTable = tab;
@@ -95,7 +95,6 @@ board * loadBoard(board * toReturn, FILE * file){
 
 char readSquare(board * currentBoard, int x, int y){
     if(x > constLength || y > constHeight) return charEmptyBloc;
-    char test = currentBoard->boardTable[y][x];
     return currentBoard->boardTable[y][x];
 }
 

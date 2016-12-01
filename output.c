@@ -70,7 +70,28 @@ void create_test_map() {
 
 }
 
-void print_interface() {
+void print_main_menu() {
+    system("cls");
+    gotoligcol(3,0);
+    printf("Démarrer la partie");
+    gotoligcol(5,0);
+    printf("Options de la partie");
+    gotoligcol(7,0);
+    printf("Quitter le jeu");
+}
+
+void print_options_menu() {
+    gotoligcol(3,0);
+    printf("Mettre des bordures : ");
+    gotoligcol(7,0);
+    printf("Mettre des murs : ");
+    gotoligcol(5,0);
+    printf("Vitesse de départ du Snake : ");
+    gotoligcol(7,0);
+    printf("Vitesse croissante : ");
+}
+
+void print_game_interface() {
     gotoligcol(62,0);
     printf("Score: 0");
     gotoligcol(63,0);
