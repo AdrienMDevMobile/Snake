@@ -39,12 +39,13 @@ void launch_game(int walls_on, int borders_on, int start_speed, int increasing_s
     int quit = 0;
     int score = 0;
     int lives = 3;
-    int allowed_to_move;
+    int allowed_to_move = 0;
 
     while(score < 40 && lives > 0 && !quit) {
 
         old_position_x = get_snake_x(game->snake);
         old_position_y = get_snake_y(game->snake);
+        char testlol3 = readSquare(game->game_map, 3, 4);
 
         if(_kbhit()) {
 
@@ -62,7 +63,6 @@ void launch_game(int walls_on, int borders_on, int start_speed, int increasing_s
             }
         }
 
-        free(allowed_to_move);
         allowed_to_move = canMove(game->snake, game->game_map);
 
         if(allowed_to_move) {

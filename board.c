@@ -95,6 +95,7 @@ board * loadBoard(board * toReturn, FILE * file){
 
 char readSquare(board * currentBoard, int x, int y){
     if(x > constLength || y > constHeight) return charEmptyBloc;
+    char test = currentBoard->boardTable[y][x];
     return currentBoard->boardTable[y][x];
 }
 
