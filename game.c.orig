@@ -2,30 +2,50 @@
 #include <stdlib.h>
 
 #include "game.h"
-#include "board.h"
-#include "output.h"
 
-void launch_game(int walls_on, int borders_on, int start_speed, int increasing_speed_on) {
-    board *map = initBoard(1);
-    print_map(map);
-    //create_test_map(map);
+game* init_game(snakeList * snake, board * map, int lives) {
+    game *toReturn = NULL;
+
+    toReturn = malloc(sizeof(game));
+    if (toReturn == NULL) /*Allocation failed */
+        {
+            exit(0);
+        }
+
+    if(snake == NULL)toReturn->snake = createSnakeList(2, 2, rand()%4, 3);
+    else toReturn->snake = snake;
+
+    if(NULL == map)toReturn->game_map = initBoard(1, 0);
+    else toReturn->game_map = map;
+
+    if(NULL == lives)toReturn->lives = 3;
+    else toReturn->lives = lives;
+
+    return toReturn;
+}
+
+void launch_game(int walls_on, int borders_on, int start_speed, int increasing_speed_on, game* game) {
+    print_map(game->game_map);
+    print_game_interface();
 
     //Creates the snake in data and outputs it
-<<<<<<< HEAD
-    snakeList* snake = createSnakeList(1,1,west,start_speed);
-    gotoligcol(get_snake_x(snake), get_snake_y(snake));
-=======
-    snakeList* snake = createSnakeList(1,5,west,start_speed);
-    gotoligcol(get_snake_y(snake), get_snake_x(snake));
->>>>>>> 6d3eee0e26e262b6f2bddad77ab2449e907e88ca
+    gotoligcol(get_snake_y(game->snake), get_snake_x(game->snake));
     printf("#");
+    setElementAtPosition(game->game_map, '#', get_snake_x(game->snake), get_snake_y(game->snake));
 
-    int old_position_x, old_position_y;
+    //Creates an apple in data and outputs it. Keeps the old position of the snake and if the user chose to quit
+    apple *current_apple = create_new_apple(game->game_map);
+    int old_position_x, old_position_y, next_pos_x, next_pos_y;
+    int quit = 0;
+    int score = 0;
+    int lives = 3;
+    int allowed_to_move = 0;
 
-    while(1) {
+    while(score < 40 && lives > 0 && !quit) {
 
-        old_position_x = get_snake_x(snake);
-        old_position_y = get_snake_y(snake);
+        old_position_x = get_snake_x(game->snake);
+        old_position_y = get_snake_y(game->snake);
+        char testlol3 = readSquare(game->game_map, 3, 4);
 
         if(_kbhit()) {
 
@@ -34,64 +54,147 @@ void launch_game(int walls_on, int borders_on, int start_speed, int increasing_s
             switch(key) {
                 case KEY_SAVE: printf("Save :D\n"); break;
                 case KEY_LOAD: printf("Load :O\n"); break;
-                case KEY_QUIT: printf("Quit T_T\n"); break;
-                case KEY_PAUSE: printf("Pause o.o\n"); break;
-                case KEY_UP: changeDirection(snake, north); break;//Changer par changeDirection du Snake
-                case KEY_DOWN: changeDirection(snake, south); break;
-                case KEY_LEFT: changeDirection(snake, west); break;
-                case KEY_RIGHT: changeDirection(snake, east); break;
+                case KEY_QUIT: quit = 1; break;
+                case KEY_PAUSE: getch(); break;
+                case KEY_UP: changeDirection(game->snake, north); break;//Changer par changeDirection du Snake
+                case KEY_DOWN: changeDirection(game->snake, south); break;
+                case KEY_LEFT: changeDirection(game->snake, west); break;
+                case KEY_RIGHT: changeDirection(game->snake, east); break;
             }
         }
 
-        int allowed_to_move = canMove(snake, map);
+<<<<<<< HEAD
+=======
+        next_pos_x = old_position_x+(game->snake->direction->x);
+        next_pos_y = old_position_y+(game->snake->direction->y);
+
+        free(allowed_to_move);
+>>>>>>> f4485d799deeba5eef67f931d13ccaf9a331ffe2
+        allowed_to_move = canMove(game->snake, game->game_map);
 
         if(allowed_to_move) {
-            //Gets back to where the snake was
-            gotoligcol(old_position_y, old_position_x);
-            printf(" ");
-            setElementAtPosition(map, ' ', old_position_x, old_position_y);
 
-            //Makes the snake move
-            snake = moveList(snake);
-<<<<<<< HEAD
-            gotoligcol(get_snake_y(snake), get_snake_x(snake));
-            printf("#");
-=======
-            if(setElementAtPosition(map, '#', get_snake_x(snake), get_snake_y(snake))) {
-                gotoligcol(get_snake_y(snake), get_snake_x(snake));
-                printf("#");
+            if(shouldMove(game->snake, &(game->snake->countdown))) {
 
-                if(setElementAtPosition(map, ' ', snake->snakeTail->x, snake->snakeTail->y)) {
-                    gotoligcol(snake->snakeTail->y, snake->snakeTail->x);
-                    printf(" ");
+                //Checks if the next square is an apple. If so, adds a part to the snake.
+                if(is_square_apple(game->game_map, next_pos_x, next_pos_y)) {
+
+                    score += get_apple_type(current_apple);
+                    update_score(score);
+
+                    //Update first, so we can take the direction in count
+                    update_snake_data_output(game);
+
+                    //Erases the apple
+                    setElementAtPosition(game->game_map, ' ', next_pos_x, next_pos_y);
+
+                    //Adds as much part to the snake as needed
+                    int i;
+                    for(i = 0; i < get_apple_type(current_apple); i++) {
+                        addPartToList(game->snake, game->snake->snakeTail->x, game->snake->snakeTail->y);
+                    }
+
+                    //Creates a new apple and outputs it
+                    free(current_apple);
+                    current_apple = create_new_apple(game->game_map);
+
+                    //Outputs the new part of the snake
+                    gotoligcol(get_snake_y(game->snake), get_snake_x(game->snake));
+                    printf("#");
+
                 } else {
-                    printf("Oho...");
+                    if(next_pos_y >= ROWS) {
+                        next_pos_y = 0;
+                        set_snake_y(game->snake, next_pos_y);
+
+                    } else if(next_pos_y <= 0) {
+                        next_pos_y = ROWS;
+                        set_snake_y(game->snake, next_pos_y);
+
+                    } else if(next_pos_x >= COLS) {
+                        next_pos_x = 0;
+                        set_snake_x(game->snake, next_pos_x);
+
+                    } else if(next_pos_x <= 0) {
+                        next_pos_x = COLS;
+                        set_snake_x(game->snake, next_pos_x);
+                    }
+
+                    //Update first, so we can take the direction in count
+                    update_snake_data_output(game);
+
+                    //Makes the snake move: just changes its coordonates
+                    moveList(game->snake);
                 }
 
-            } else {
-                printf("Oho...");
             }
->>>>>>> 6d3eee0e26e262b6f2bddad77ab2449e907e88ca
+        } else if(getDirection(game->snake->direction) != none_dir) {
+            changeDirection(game->snake, none_dir);
+            lives--;
+            update_lives(lives);
         }
     }
 }
 
 int canMove(snakeList *snake, board *map) {
     int canMove = 0;
+
+    //Gets the position and direction of the snake
     int position_x = get_snake_x(snake);
     int position_y = get_snake_y(snake);
-    direction *dir = snake->direction;
-<<<<<<< HEAD
-    char nextSquare = readSquare(map, position_x-(dir->x), position_y-(dir->y));
-    printf("%d", nextSquare);
-    getch();
-=======
-    char nextSquare = readSquare(map, position_x+(dir->x), position_y+(dir->y));
->>>>>>> 6d3eee0e26e262b6f2bddad77ab2449e907e88ca
 
-    if(nextSquare != 35 && shouldMove(snake, &(snake->countdown)) ) {
+    //Check the next square in data
+    char nextSquare = readSquare(map, position_x+(snake->direction->x), position_y+(snake->direction->y));
+
+    //Checks if it is anything but a wall or the snake itself
+    if(nextSquare != 35) {
         canMove = 1;
     }
 
     return canMove;
+}
+
+int is_square_apple(board *table, int pos_x, int pos_y) {
+    int is_it_apple = 0;
+
+    //Reads the square gave by the arguments
+    char square = readSquare(table, pos_x, pos_y);
+
+    //Checks if it is an apple
+    if(square == NORMAL_APPLE || square == SPECIAL_APPLE) {
+        is_it_apple = 1;
+    }
+
+    return is_it_apple;
+}
+
+//Creates a new apple on the board and outputs it
+apple* create_new_apple(board *table) {
+    //Initializes an apple
+    apple *current_apple = init_apple(table);
+
+    //Sets in data its position, passing its character
+    setElementAtPosition(table, get_apple_char(current_apple), get_apple_pos_x(current_apple), get_apple_pos_y(current_apple));
+
+    //Outputs the apple
+    gotoligcol(get_apple_pos_y(current_apple), get_apple_pos_x(current_apple));
+    printf("%c", get_apple_char(current_apple));
+
+    return current_apple;
+}
+
+void update_snake_data_output(game* game) {
+    int next_pos_x = get_snake_x(game->snake)+(game->snake->direction->x);
+    int next_pos_y = get_snake_y(game->snake)+(game->snake->direction->y);
+    //Puts the character in the data table, and checks if it really did
+    setElementAtPosition(game->game_map, '#', next_pos_x, next_pos_y);
+
+    //Sets the cursor where the snake will be and output a character
+    gotoligcol(get_snake_y(game->snake), get_snake_x(game->snake));
+    printf("#");
+
+    //Same logic to erase the tail
+    setElementAtPosition(game->game_map, ' ', game->snake->snakeTail->x, game->snake->snakeTail->y);
+    gotoligcol(game->snake->snakeTail->y, game->snake->snakeTail->x);
+    printf(" ");
 }

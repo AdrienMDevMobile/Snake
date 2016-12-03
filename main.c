@@ -33,8 +33,8 @@ int main()
     //create_test_map();
 
     //GAME TEST
-    //game* game = init_game(NULL, NULL, NULL);
-    game* game = readSaveFile();
+    game* game = init_game(NULL, NULL, NULL);
+    //game* game = readSaveFile();
     //testCreationSave(game->game_map);
     //testCreationSaveSnake(game->snake);
     launch_game(1,0,3,0, game);
