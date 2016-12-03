@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <windows.h>
 #include "board.h"
+#include "game.h"
 
 //A REMPLACER LORSQUE LA MAP SERA FAITE
 #define ROWS 50
@@ -19,5 +20,6 @@ void print_game_interface();
 
 void update_score(int score);
 void update_lives(int lives);
+void print_choice_user(char* msg);
 
 #endif

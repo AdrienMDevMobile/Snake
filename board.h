@@ -9,9 +9,7 @@
 
 //List of possible values return by the function readSquares
 static char const charEmptyBloc=' ';
-static char const charSnakePart='*';
 static char const charWall='#';
-static char const charApple='A';
 
 //The dimension of the table at the creation has been written manually.
 static int const constLength=50;

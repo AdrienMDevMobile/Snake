@@ -132,29 +132,29 @@
 	<stdio.h>
 	<stdlib.h>
 
-1480363195 source:c:\users\adrien\desktop\programmation\snake\direction.c
+1479931012 source:c:\users\adrien\desktop\programmation\snake\direction.c
 	<stdio.h>
 	<stdlib.h>
 	"direction.h"
 
-1480363195 c:\users\adrien\desktop\programmation\snake\direction.h
+1479931012 c:\users\adrien\desktop\programmation\snake\direction.h
 	<stdio.h>
 	<stdlib.h>
 
-1480585198 source:c:\users\adrien\desktop\programmation\snake\game.c
+1479931012 source:c:\users\adrien\desktop\programmation\snake\game.c
 	<stdio.h>
 	<stdlib.h>
 	"game.h"
+	"board.h"
+	"output.h"
 
-1480518937 c:\users\adrien\desktop\programmation\snake\game.h
+1479931012 c:\users\adrien\desktop\programmation\snake\game.h
 	<stdio.h>
 	<stdlib.h>
 	"output.h"
 	"snakePart.h"
 	"snakeList.h"
 	"input_functions.h"
-	"apple.h"
-	"board.h"
 
 1479931012 c:\users\adrien\desktop\programmation\snake\snakepart.h
 	<stdio.h>
@@ -172,7 +172,7 @@
 	"linked_list.h"
 	"direction.h"
 
-1480585431 source:c:\users\adrien\desktop\programmation\snake\main.c
+1479981822 source:c:\users\adrien\desktop\programmation\snake\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -186,7 +186,6 @@
 	"board.h"
 	"game.h"
 	"testAdrien.h"
-	"saving.h"
 
 1478951925 source:c:\users\sadisu\desktop\snake_project\github_snake\trunk\direction.c
 	<stdio.h>
@@ -238,12 +237,12 @@
 	<stdio.h>
 	<stdlib.h>
 
-1480430649 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\game.c
+1480581174 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\game.c
 	<stdio.h>
 	<stdlib.h>
 	"game.h"
 
-1480361593 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\game.h
+1480584434 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\game.h
 	<stdio.h>
 	<stdlib.h>
 	"output.h"
@@ -274,7 +273,7 @@
 	"linked_list.h"
 	"direction.h"
 
-1480342371 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\main.c
+1480582209 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -287,19 +286,21 @@
 	"input_functions.h"
 	"board.h"
 	"game.h"
+	"menu.h"
 	"testAdrien.h"
 
-1480363514 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\output.h
+1480584243 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\output.h
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
 	"board.h"
+	"game.h"
 
 1480159046 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\input_functions.h
 	<stdio.h>
 	<stdlib.h>
 
-1480429236 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\output.c
+1480584236 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\output.c
 	"output.h"
 
 1480337865 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\apple.c
@@ -310,15 +311,14 @@
 	<stdlib.h>
 	"board.h"
 
-1480363195 source:c:\users\adrien\desktop\programmation\snake\apple.c
+1479931012 source:c:\users\adrien\desktop\programmation\snake\apple.c
 	"apple.h"
 
-1480363195 c:\users\adrien\desktop\programmation\snake\apple.h
+1479931012 c:\users\adrien\desktop\programmation\snake\apple.h
 	<stdio.h>
 	<stdlib.h>
-	"board.h"
 
-1480584640 c:\users\adrien\desktop\programmation\snake\output.h
+1479931012 c:\users\adrien\desktop\programmation\snake\output.h
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -328,7 +328,7 @@
 	<stdio.h>
 	<stdlib.h>
 
-1480584640 source:c:\users\adrien\desktop\programmation\snake\output.c
+1479931012 source:c:\users\adrien\desktop\programmation\snake\output.c
 	"output.h"
 
 1479931012 source:c:\users\adrien\desktop\programmation\snake\snakepart.c
@@ -336,22 +336,22 @@
 	<stdlib.h>
 	"snakePart.h"
 
-1480584640 c:\users\adrien\desktop\programmation\snake\snakelist.h
+1479978478 c:\users\adrien\desktop\programmation\snake\snakelist.h
 	<stdio.h>
 	<stdlib.h>
 	"snakePart.h"
 	"direction.h"
 
-1480584640 source:c:\users\adrien\desktop\programmation\snake\snakelist.c
+1479976990 source:c:\users\adrien\desktop\programmation\snake\snakelist.c
 	<stdio.h>
 	<stdlib.h>
 	"snakeList.h"
 	"direction.h"
 
-1480520947 source:c:\users\adrien\desktop\programmation\snake\testadrien.c
+1479981868 source:c:\users\adrien\desktop\programmation\snake\testadrien.c
 	"testAdrien.h"
 
-1480520842 c:\users\adrien\desktop\programmation\snake\testadrien.h
+1479931012 c:\users\adrien\desktop\programmation\snake\testadrien.h
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -407,15 +407,15 @@
 	"direction.h"
 	"input_functions.h"
 
-1480519011 c:\users\adrien\desktop\programmation\snake\board.h
+1479983546 c:\users\adrien\desktop\programmation\snake\board.h
 	<stdio.h>
 	<stdlib.h>
 	"snakeList.h"
 
-1480363195 source:c:\users\adrien\desktop\programmation\snake\testkerian.c
+1479931012 source:c:\users\adrien\desktop\programmation\snake\testkerian.c
 	"testKerian.h"
 
-1480363195 c:\users\adrien\desktop\programmation\snake\testkerian.h
+1479931012 c:\users\adrien\desktop\programmation\snake\testkerian.h
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -427,17 +427,15 @@
 	"direction.h"
 	"input_functions.h"
 
-1480584941 source:c:\users\adrien\desktop\programmation\snake\board.c
-	<stdlib.h>
-	<stdio.h>
+1479985952 source:c:\users\adrien\desktop\programmation\snake\board.c
 	"board.h"
 
-1480158381 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\board.h
+1480519728 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\board.h
 	<stdio.h>
 	<stdlib.h>
 	"snakeList.h"
 
-1480430089 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\board.c
+1480519761 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\board.c
 	<stdlib.h>
 	<stdio.h>
 	"board.h"
@@ -563,14 +561,11 @@
 	<stdio.h>
 	"board.h"
 
-1480583671 source:c:\users\adrien\desktop\programmation\snake\saving.c
-	<stdio.h>
-	<stdlib.h>
-	"game.h"
-	"snakeList.h"
+1480583324 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\menu.c
+	"menu.h"
 
-1480517085 c:\users\adrien\desktop\programmation\snake\saving.h
+1480518167 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\menu.h
 	<stdio.h>
 	<stdlib.h>
-	"game.h"
+	"output.h"
 
