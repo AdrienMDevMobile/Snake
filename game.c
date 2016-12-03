@@ -3,7 +3,7 @@
 
 #include "game.h"
 
-game* init_game(snakeList * snake, board * map, int lives) {
+game* init_game(snakeList * snake, board * map, apple * newApple, int lives, int score, int walls_on, int borders_on){
     game *toReturn = NULL;
 
     toReturn = malloc(sizeof(game));
@@ -13,10 +13,16 @@ game* init_game(snakeList * snake, board * map, int lives) {
         }
 
     if(snake == NULL)toReturn->snake = createSnakeList(2, 2, rand()%4, 3);
-    toReturn->game_map = initBoard(walls_on);
+    else toReturn->snake = snake;
 
-    toReturn->score = 0;
-    toReturn->apple = create_new_apple(toReturn->game_map);
+     if(NULL == map)toReturn->game_map = initBoard(1, 0);
+     else toReturn->game_map = map;
+
+    if(score == NULL) toReturn->score = 0;
+    else toReturn->score = score;
+
+    if(newApple == NULL)toReturn->apple = create_new_apple(toReturn->game_map);
+    else toReturn->apple = newApple;
 
     if(NULL == lives)toReturn->lives = 3;
     else toReturn->lives = lives;
@@ -82,7 +88,7 @@ void launch_game(int start_speed, int increasing_speed_on, game* game) {
 
                     //Adds as much part to the snake as needed
                     int i;
-                    for(i = 0; i < get_apple_type(current_apple); i++) {
+                    for(i = 0; i < get_apple_type(game->apple); i++) {
                         addPartToList(game->snake, game->snake->snakeTail->x, game->snake->snakeTail->y);
                     }
 

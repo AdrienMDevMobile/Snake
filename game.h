@@ -23,7 +23,7 @@ typedef struct game
 
 }game;
 
-game* init_game(int walls_on, int borders_on);
+game* init_game(snakeList * snake, board * map, apple * newApple, int lives,int score,  int walls_on, int borders_on);
 void launch_game(int start_speed, int increasing_speed_on, game* game);
 struct snakeList init_snake(char game_map[62][52]);
 int canMove(snakeList *snake, board *map);

@@ -165,10 +165,11 @@ game * readSaveFile(){
 
         char actualChar = fgetc(file); //Reads the \n in front of the board.
         board * newBoard = initBoard(0, 0);
-        //printf("aaaa%ca", );
+
         newBoard = loadBoard(newBoard, file);
 
-        game * toReturn = init_game(newSnake, newBoard, life);
+        //game* init_game(snakeList * snake, board * map, int lives, int score, apple * newApple, int walls_on, int borders_on);
+        game * toReturn = init_game(newSnake, newBoard, life, NULL, NULL, 0, 0);
 
 
       //  readSaveSnake(file);
