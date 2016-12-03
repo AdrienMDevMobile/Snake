@@ -15,7 +15,7 @@ game* init_game(snakeList * snake, board * map, apple * newApple, int lives, int
     if(snake == NULL)toReturn->snake = createSnakeList(2, 2, rand()%4, 3);
     else toReturn->snake = snake;
 
-     if(NULL == map)toReturn->game_map = initBoard(1, 0);
+     if(NULL == map)toReturn->game_map = initBoard(walls_on, borders_on);
      else toReturn->game_map = map;
 
     if(score == NULL) toReturn->score = 0;
@@ -169,7 +169,7 @@ int is_square_apple(board *table, int pos_x, int pos_y) {
 //Creates a new apple on the board and outputs it
 apple* create_new_apple(board *table) {
     //Initializes an apple
-    apple *current_apple = init_apple(table);
+    apple *current_apple = init_apple(table, NULL);
 
     //Sets in data its position, passing its character
     setElementAtPosition(table, get_apple_char(current_apple), get_apple_pos_x(current_apple), get_apple_pos_y(current_apple));

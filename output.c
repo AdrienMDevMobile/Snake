@@ -12,7 +12,7 @@ void gotoligcol( int lig, int col ) {
 
 //A TERME, CETTE FONCTION DOIT AVOIR UN TABLEAU DE CARACTERES EN PARAMETRE
 void print_map(board* map) {
-
+    gotoligcol(0,0);
     //Get number of columns and rows
     int num_rows = ROWS;
     int num_cols = COLS;

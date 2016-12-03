@@ -2,7 +2,7 @@
 #include "apple.h"
 
 //Initialization
-struct apple *init_apple(board *table) {
+struct apple *init_apple(board *table, int appleType) {
     apple *toReturn = NULL;
 
     toReturn = malloc(sizeof(apple));
@@ -16,7 +16,9 @@ struct apple *init_apple(board *table) {
     toReturn->pos_y = rand() % 60;
 
     //Choose a number between 0 and 100 and defines the apple_type
-    int random_type = rand() % 100;
+    int random_type;
+    if(appleType == NULL) random_type = appleType * 100; //If appletype = 0 : normal apple, 1 = special apple
+    else random_type = rand() % 100;
 
     int check_position = 0;
 

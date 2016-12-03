@@ -168,11 +168,8 @@ game * readSaveFile(){
 
         newBoard = loadBoard(newBoard, file);
 
-        //game* init_game(snakeList * snake, board * map, int lives, int score, apple * newApple, int walls_on, int borders_on);
         game * toReturn = init_game(newSnake, newBoard, life, NULL, NULL, 0, 0);
 
-
-      //  readSaveSnake(file);
         fclose(file); // On ferme le fichier qui a été ouvert
         return toReturn;
     }
