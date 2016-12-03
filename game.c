@@ -12,7 +12,7 @@ game* init_game(snakeList * snake, board * map, apple * newApple, int lives, int
             exit(0);
         }
 
-    if(snake == NULL)toReturn->snake = createSnakeList(2, 2, rand()%4, 3);
+    if(snake == NULL)toReturn->snake = createSnakeList(rand()%50, rand()%60, rand()%4, 3);
     else toReturn->snake = snake;
 
      if(NULL == map)toReturn->game_map = initBoard(walls_on, borders_on);
@@ -101,7 +101,7 @@ void launch_game(int start_speed, int increasing_speed_on, game* game) {
                     printf("%c", SNAKE_CHAR);
 
                 } else {
-                    if(next_pos_y >= COLS) {
+                    if(next_pos_y >= COLS-1) {
                         next_pos_y = 0;
                         set_snake_y(game->snake, next_pos_y);
 
@@ -109,7 +109,7 @@ void launch_game(int start_speed, int increasing_speed_on, game* game) {
                         next_pos_y = COLS;
                         set_snake_y(game->snake, next_pos_y);
 
-                    } else if(next_pos_x >= ROWS) {
+                    } else if(next_pos_x >= ROWS-1) {
                         next_pos_x = 0;
                         set_snake_x(game->snake, next_pos_x);
 
