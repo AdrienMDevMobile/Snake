@@ -20,7 +20,7 @@ board * initBoard(int doAddWall){
         while(x<constLength){
              //toReturn->boardTable[y][x] = ' ';
              if(y == constHeight-1 || y == 0 || x == 0 || x == constLength-1) {
-                tab[y][x] = ' ';
+                tab[y][x] = '#';
              } else {
                 tab[y][x] = ' ';
              }

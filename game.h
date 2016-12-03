@@ -18,11 +18,13 @@ typedef struct game
     board* game_map;
     int lives;
     struct snakeList *snake;
+    int score;
+    apple* apple;
 
 }game;
 
-game* init_game();
-void launch_game(int walls_on, int borders_on, int start_speed, int increasing_speed_on, game* game);//TODO: Ajouter la vue en paramètre//
+game* init_game(int walls_on, int borders_on);
+void launch_game(int start_speed, int increasing_speed_on, game* game);
 struct snakeList init_snake(char game_map[62][52]);
 int canMove(snakeList *snake, board *map);
 int is_square_apple(board *table, int pos_x, int pos_y);

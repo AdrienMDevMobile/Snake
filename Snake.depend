@@ -237,12 +237,12 @@
 	<stdio.h>
 	<stdlib.h>
 
-1480430649 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\game.c
+1480581174 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\game.c
 	<stdio.h>
 	<stdlib.h>
 	"game.h"
 
-1480361593 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\game.h
+1480584434 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\game.h
 	<stdio.h>
 	<stdlib.h>
 	"output.h"
@@ -273,7 +273,7 @@
 	"linked_list.h"
 	"direction.h"
 
-1480342371 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\main.c
+1480582209 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -286,19 +286,21 @@
 	"input_functions.h"
 	"board.h"
 	"game.h"
+	"menu.h"
 	"testAdrien.h"
 
-1480363514 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\output.h
+1480584243 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\output.h
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
 	"board.h"
+	"game.h"
 
 1480159046 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\input_functions.h
 	<stdio.h>
 	<stdlib.h>
 
-1480429236 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\output.c
+1480584236 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\output.c
 	"output.h"
 
 1480337865 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\apple.c
@@ -428,12 +430,12 @@
 1479985952 source:c:\users\adrien\desktop\programmation\snake\board.c
 	"board.h"
 
-1480158381 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\board.h
+1480519728 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\board.h
 	<stdio.h>
 	<stdlib.h>
 	"snakeList.h"
 
-1480430089 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\board.c
+1480519761 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\board.c
 	<stdlib.h>
 	<stdio.h>
 	"board.h"
@@ -558,4 +560,12 @@
 	<stdlib.h>
 	<stdio.h>
 	"board.h"
+
+1480583324 source:c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\menu.c
+	"menu.h"
+
+1480518167 c:\users\sadisu\desktop\snake_project\github_snake\snake\trunk\menu.h
+	<stdio.h>
+	<stdlib.h>
+	"output.h"
 

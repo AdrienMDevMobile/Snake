@@ -72,22 +72,22 @@ void create_test_map() {
 
 void print_main_menu() {
     system("cls");
-    gotoligcol(3,0);
-    printf("Démarrer la partie");
-    gotoligcol(5,0);
+    gotoligcol(3,3);
+    printf("Demarrer la partie");
+    gotoligcol(5,3);
     printf("Options de la partie");
-    gotoligcol(7,0);
+    gotoligcol(7,3);
     printf("Quitter le jeu");
 }
 
 void print_options_menu() {
-    gotoligcol(3,0);
+    gotoligcol(5,26);
     printf("Mettre des bordures : ");
-    gotoligcol(7,0);
+    gotoligcol(7,26);
     printf("Mettre des murs : ");
-    gotoligcol(5,0);
-    printf("Vitesse de départ du Snake : ");
-    gotoligcol(7,0);
+    gotoligcol(9,26);
+    printf("Vitesse de depart du Snake : ");
+    gotoligcol(11,26);
     printf("Vitesse croissante : ");
 }
 
@@ -106,4 +106,12 @@ void update_score(int score) {
 void update_lives(int lives) {
     gotoligcol(63,7);
     printf("%d", lives);
+}
+
+void print_choice_user(char* msg) {
+    //Afficher une ligne à l'utilisateur
+    system("cls");
+    gotoligcol(3,3);
+    printf("%s", msg);
+    gotoligcol(4,3);
 }

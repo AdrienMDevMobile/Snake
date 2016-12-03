@@ -11,6 +11,7 @@
 #include "input_functions.h"
 #include "board.h"
 #include "game.h"
+#include "menu.h"
 #include "testAdrien.h"
 
 
@@ -32,7 +33,10 @@ int main()
     //create_test_map();
 
     //GAME TEST
-    game* game = init_game();
-    launch_game(1,0,3,0, game);
+    game* game = init_game(1,0);
+
+    /*menu* menu = init_menu();
+    set_walls_option(menu);*/
+    launch_game(3,0, game);
 }
 
