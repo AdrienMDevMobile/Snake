@@ -34,7 +34,9 @@ int main()
 
     //GAME TEST
 
-    game* game = init_game(NULL, NULL, NULL, 3, 0, 1,0);
+    //game* game = init_game(NULL, NULL, NULL, 3, 0, 1,0);
+
+    game * game = readSaveFile();
     /*menu* menu = init_menu();
     set_walls_option(menu);*/
     launch_game(3,0, game);

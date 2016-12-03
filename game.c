@@ -32,7 +32,7 @@ game* init_game(snakeList * snake, board * map, apple * newApple, int lives, int
 
 void launch_game(int start_speed, int increasing_speed_on, game* game) {
     print_map(game->game_map);
-    print_game_interface();
+    print_game_interface(game);
 
     //Creates the snake in data and outputs it
     gotoligcol(get_snake_y(game->snake), get_snake_x(game->snake));
@@ -169,7 +169,7 @@ int is_square_apple(board *table, int pos_x, int pos_y) {
 //Creates a new apple on the board and outputs it
 apple* create_new_apple(board *table) {
     //Initializes an apple
-    apple *current_apple = init_apple(table, NULL);
+    apple *current_apple = init_apple(table);
 
     //Sets in data its position, passing its character
     setElementAtPosition(table, get_apple_char(current_apple), get_apple_pos_x(current_apple), get_apple_pos_y(current_apple));

@@ -91,11 +91,11 @@ void print_options_menu() {
     printf("Vitesse croissante : ");
 }
 
-void print_game_interface() {
+void print_game_interface(game * game) {
     gotoligcol(62,0);
-    printf("Score: 0");
+    printf("Score: %i", game->score);
     gotoligcol(63,0);
-    printf("Lives: 3");
+    printf("Lives: %i", game->lives);
 }
 
 void update_score(int score) {

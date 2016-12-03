@@ -20,7 +20,9 @@ typedef struct apple
 }apple;
 
 //Define the init of apple
-struct apple *init_apple(board *table, int appleType);
+apple *init_apple(board *table);
+//To recreate an apple from a save file
+apple * recreate_apple(int appleType, int x, int y);
 
 //Define the setters and getters
 int get_apple_pos_x(apple *currentApple);

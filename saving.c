@@ -3,7 +3,9 @@
 
 #include "game.h"
 #include "snakeList.h"
+#include "apple.h"
 
+/* {direction_snake}{Speed_snake}{Countdown_snake}{Growth_snake}{List of snake elements}(Life)[Apple] */
 
 snakeList * readSaveSnake(FILE * file){
 
@@ -132,7 +134,8 @@ snakeList * readSaveSnake(FILE * file){
     return toReturn;
 }
 
-int readSaveLife(FILE * file){
+//Is used to get the
+int readSaveLifeOrScore(FILE * file){
     //Gets the direction-----------------------------------------------------
     char actualChar = fgetc(file); // Read the first character of the countdown '('
     char * readNumber = (char*)malloc(sizeof(char)*10);
@@ -150,6 +153,45 @@ int readSaveLife(FILE * file){
     return life;
 }
 
+apple * readSaveApple(FILE * file){
+    //Gets x and y-----------------------------------------------------
+
+    char actualChar = actualChar = fgetc(file); //Read the initial char '['
+    char * readNumber  = (char*)malloc(sizeof(char)*10);
+
+    int i = 0;
+     do{
+        actualChar = fgetc(file);
+        readNumber[i] = actualChar;
+        i++;
+    }
+    while(actualChar!=' ');
+    int x = atoi(readNumber);
+    free(readNumber);
+
+    readNumber = (char*)malloc(sizeof(char)*10);
+    i = 0;
+    do{
+        actualChar = fgetc(file);
+        readNumber[i] = actualChar;
+        i++;
+    }
+    while(actualChar!=' ');
+    int y = atoi(readNumber);
+    free(readNumber);
+
+
+    //Read the type of the apple
+    readNumber = (char*)malloc(sizeof(char)*10);
+    int appleType = atoi(readNumber);
+    free(readNumber);
+
+    actualChar = fgetc(file); //Read the last char '['
+
+    apple * toReturn = recreate_apple(appleType, x, y);
+}
+
+
 
 game * readSaveFile(){
 
@@ -161,14 +203,17 @@ game * readSaveFile(){
     {
         snakeList * newSnake = readSaveSnake(file);
 
-        int life = readSaveLife(file);
+        int life = readSaveLifeOrScore(file);
+        int score = readSaveLifeOrScore(file);
+
+        apple * newApple = readSaveApple(file);
 
         char actualChar = fgetc(file); //Reads the \n in front of the board.
         board * newBoard = initBoard(0, 0);
 
         newBoard = loadBoard(newBoard, file);
 
-        game * toReturn = init_game(newSnake, newBoard, life, NULL, NULL, 0, 0);
+        game * toReturn = init_game(newSnake, newBoard, newApple, life, score, 0, 0);
 
         fclose(file); // On ferme le fichier qui a été ouvert
         return toReturn;
