@@ -17,13 +17,17 @@ typedef struct menu {
 
 menu* init_menu();
 
-menu* set_walls_option(menu* menu);
+//Functions to change the options of the game
+menu* reverse_walls_option(menu* menu);
 
-menu* set_borders_option(menu* menu);
+menu* reverse_borders_option(menu* menu);
 
 menu* set_start_speed(menu* menu);
 
-menu* set_increasing_speed(menu* menu);
+menu* reverse_increasing_speed(menu* menu);
+
+//Function that reverses a boolean value. 0 to 1 and 1 to 0.
+int reverse_boolean_value(int value);
 
 
 #endif // MENU_H_INCLUDED

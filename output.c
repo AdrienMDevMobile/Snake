@@ -10,7 +10,6 @@ void gotoligcol( int lig, int col ) {
        SetConsoleCursorPosition( GetStdHandle( STD_OUTPUT_HANDLE ), mycoord );
 }
 
-//A TERME, CETTE FONCTION DOIT AVOIR UN TABLEAU DE CARACTERES EN PARAMETRE
 void print_map(board* map) {
     gotoligcol(0,0);
     //Get number of columns and rows
@@ -72,28 +71,35 @@ void create_test_map() {
 
 void print_main_menu() {
     system("cls");
+
     gotoligcol(3,3);
     printf("Demarrer la partie");
+
     gotoligcol(5,3);
     printf("Options de la partie");
+
     gotoligcol(7,3);
     printf("Quitter le jeu");
 }
 
-void print_options_menu() {
+void print_options_menu(menu* menu) {
     gotoligcol(5,26);
-    printf("Mettre des bordures : ");
+    printf("Mettre des bordures : %d", menu->borders_on);
+
     gotoligcol(7,26);
-    printf("Mettre des murs : ");
+    printf("Mettre des murs : %d", menu->walls_on);
+
     gotoligcol(9,26);
-    printf("Vitesse de depart du Snake : ");
+    printf("Vitesse de depart du Snake : %d", menu->start_speed);
+
     gotoligcol(11,26);
-    printf("Vitesse croissante : ");
+    printf("Vitesse croissante : %d", menu->increasing_speed_on);
 }
 
 void print_game_interface(game * game) {
     gotoligcol(62,0);
     printf("Score: %i", game->score);
+
     gotoligcol(63,0);
     printf("Lives: %i", game->lives);
 }

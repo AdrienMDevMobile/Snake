@@ -12,7 +12,7 @@ game* init_game(snakeList * snake, board * map, apple * newApple, int lives, int
             exit(0);
         }
 
-    if(snake == NULL)toReturn->snake = createSnakeList(rand()%50, rand()%60, rand()%4, 3);
+    if(snake == NULL) toReturn->snake = createSnakeList(rand()%50, rand()%60, rand()%4, 3);
     else toReturn->snake = snake;
 
      if(NULL == map)toReturn->game_map = initBoard(walls_on, borders_on);

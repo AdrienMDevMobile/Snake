@@ -17,7 +17,7 @@ typedef struct apple
     int countdown;
     char apple_char;
 
-}apple;
+} apple;
 
 //Define the init of apple
 apple *init_apple(board *table);
