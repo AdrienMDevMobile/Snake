@@ -24,7 +24,7 @@ typedef struct game
 }game;
 
 //Initialize the game. Takes all of what will compose the game, as well as two options needed to create a board if needed
-game* init_game(snakeList * snake, board * map, apple * newApple, int lives,int score,  int walls_on, int borders_on);
+game* init_game(snakeList * snake, board * map, apple * newApple, int lives, int score, int walls_on, int borders_on);
 
 //Function that launches and organizes the game until it ends
 void launch_game(int start_speed, int increasing_speed_on, game* game);

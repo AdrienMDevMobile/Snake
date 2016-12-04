@@ -15,5 +15,7 @@
 #define KEY_LOAD 99//C key
 #define KEY_PAUSE 112//P key
 #define KEY_QUIT 113//Q key
+#define KEY_ESC 27//Escape key
+#define KEY_ENTER 13//Enter key
 
 #endif

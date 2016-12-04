@@ -2,16 +2,17 @@
 
 //Move the cursor on one
 void gotoligcol( int lig, int col ) {
-       // ressources
-       COORD mycoord;
+    // ressources
+    COORD mycoord;
 
-       mycoord.X = col;
-       mycoord.Y = lig;
-       SetConsoleCursorPosition( GetStdHandle( STD_OUTPUT_HANDLE ), mycoord );
+    mycoord.X = col;
+    mycoord.Y = lig;
+    SetConsoleCursorPosition( GetStdHandle( STD_OUTPUT_HANDLE ), mycoord );
 }
 
 void print_map(board* map) {
     gotoligcol(0,0);
+
     //Get number of columns and rows
     int num_rows = ROWS;
     int num_cols = COLS;
@@ -28,45 +29,6 @@ void print_map(board* map) {
         }
         printf("\n");
     }
-}
-
-//JUSTE UNE FONCTION DE TEST LE TEMPS D'AVOIR LE TABLEAU
-void create_test_map() {
-
-    //TEST DE TABLEAU POUR LA MAP
-    char** map = (char**)malloc(ROWS*sizeof(char*));
-    int i;
-    for(i = 0; i<ROWS; i++)
-        map[i] = (char*)malloc(COLS*sizeof(char));
-
-    int num_cols = COLS;
-    int num_rows = ROWS;
-
-    //Iterators of the map for columns and rows
-    int row_iterator_map;
-    int col_iterator_map;
-
-    for(col_iterator_map = 0; col_iterator_map<num_cols; col_iterator_map++) {
-        for(row_iterator_map = 0; row_iterator_map<num_rows; row_iterator_map++) {
-            if(col_iterator_map == 0 || col_iterator_map == num_cols-1 || row_iterator_map == 0 || row_iterator_map == num_rows-1) {
-                map[row_iterator_map][col_iterator_map] = '#';
-
-            } else {
-                map[row_iterator_map][col_iterator_map] = ' ';
-            }
-        }
-    }
-
-    /*printf("%d\n",sizeof(map));
-    for(int i = 0; i<5; i++) {
-        for(int j = 0; j<5; j++) {
-            printf("%c ",map[i][j]);
-        }
-        printf("\n");
-    }*/
-
-    //print_map(map, sizeof(map));
-
 }
 
 void print_main_menu() {
@@ -104,14 +66,42 @@ void print_game_interface(game * game) {
     printf("Lives: %i", game->lives);
 }
 
-void update_score(int score) {
-    gotoligcol(62,7);
-    printf("%d", score);
+void print_cursor_main_menu(int choice) {
+    switch(choice) {
+        case 1: gotoligcol(3,2); printf("%c", CURSOR); break;
+        case 2: gotoligcol(5,2); printf("%c", CURSOR); break;
+        case 3: gotoligcol(7,2); printf("%c", CURSOR); break;
+        default: break;
+    }
 }
 
-void update_lives(int lives) {
-    gotoligcol(63,7);
-    printf("%d", lives);
+void clear_cursor_main_menu(int choice) {
+    switch(choice) {
+        case 1: gotoligcol(3,2); printf(" "); break;
+        case 2: gotoligcol(5,2); printf(" "); break;
+        case 3: gotoligcol(7,2); printf(" "); break;
+        default: break;
+    }
+}
+
+void print_cursor_option_menu(int choice) {
+    switch(choice) {
+        case 1: gotoligcol(5,25); printf("%c", CURSOR); break;
+        case 2: gotoligcol(7,25); printf("%c", CURSOR); break;
+        case 3: gotoligcol(9,25); printf("%c", CURSOR); break;
+        case 4: gotoligcol(11,25); printf("%c", CURSOR); break;
+        default: break;
+    }
+}
+
+void clear_cursor_option_menu(int choice) {
+    switch(choice) {
+        case 1: gotoligcol(5,25); printf(" "); break;
+        case 2: gotoligcol(7,25); printf(" "); break;
+        case 3: gotoligcol(9,25); printf(" "); break;
+        case 4: gotoligcol(11,25); printf(" "); break;
+        default: break;
+    }
 }
 
 void print_choice_user(char* msg) {
@@ -120,4 +110,14 @@ void print_choice_user(char* msg) {
     gotoligcol(3,3);
     printf("%s", msg);
     gotoligcol(4,3);
+}
+
+void update_score(int score) {
+    gotoligcol(62,7);
+    printf("%d", score);
+}
+
+void update_lives(int lives) {
+    gotoligcol(63,7);
+    printf("%d", lives);
 }

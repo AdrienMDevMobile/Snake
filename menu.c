@@ -13,6 +13,8 @@ menu* init_menu() {
     toReturn->borders_on = 0;
     toReturn->start_speed = 3;
     toReturn->increasing_speed_on = 0;
+    toReturn->main_choice = 1;
+    toReturn->option_choice = 1;
 
     print_main_menu();
 
@@ -90,4 +92,114 @@ int reverse_boolean_value(int value) {
     }
 
     return value;
+}
+
+int increase_main_choice(menu* menu) {
+    menu->main_choice++;
+
+    return menu->main_choice;
+}
+
+int decrease_main_choice(menu* menu) {
+    menu->main_choice--;
+
+    return menu->main_choice;
+}
+
+int increase_options_choice(menu* menu) {
+    menu->option_choice++;
+
+    return menu->option_choice;
+}
+
+int decrease_options_choice(menu* menu) {
+    menu->option_choice--;
+
+    return menu->option_choice;
+}
+
+int define_user_choice(menu* menu) {
+    game* game = init_game(NULL, NULL, NULL, 3, 0, menu->walls_on, menu->borders_on);
+    switch(menu->main_choice) {
+        case 1: launch_game(menu->start_speed, menu->increasing_speed_on, game); break;
+        case 2: start_option_menu(menu); break;
+        case 3: exit(0); break;
+    }
+}
+
+int define_user_option(menu* menu) {
+    switch(menu->option_choice) {
+        case 1: reverse_borders_option(menu); break;
+        case 2: reverse_walls_option(menu); break;
+        case 3: set_start_speed(menu); break;
+        case 4: reverse_increasing_speed(menu); break;
+    }
+}
+
+void moveCursorMainMenu(menu* menu, int pos_y) {
+    int tmp_choice = menu->main_choice + pos_y;
+
+    //Checks if the choice is valid. If so, clears the cursor and prints it elsewhere
+    if(tmp_choice > 0 && tmp_choice < 4) {
+        clear_cursor_main_menu(menu->main_choice);
+        menu->main_choice += pos_y;
+        print_cursor_main_menu(menu->main_choice);
+    }
+}
+
+void moveCursorOptionMenu(menu* menu, int pos_y) {
+    int tmp_choice = menu->option_choice + pos_y;
+
+    //Checks if the choice is valid. If so, clears the cursor and prints it elsewhere
+    if(tmp_choice > 0 && tmp_choice < 5) {
+        clear_cursor_option_menu(menu->option_choice);
+        menu->option_choice += pos_y;
+        print_cursor_option_menu(menu->option_choice);
+    }
+}
+
+void start_main_menu() {
+    menu* menu = init_menu();
+    int out = 0;
+    int key;
+
+    print_main_menu();
+    print_cursor_main_menu(menu->main_choice);
+
+    while(!out) {
+
+        if(kbhit()) {
+            key = getch();
+
+            switch(key) {
+                case KEY_ENTER: define_user_choice(menu); break;
+                case KEY_UP: moveCursorMainMenu(menu, -1); break;//Changer par changeDirection du Snake
+                case KEY_DOWN: moveCursorMainMenu(menu, 1); break;
+            }
+        }
+
+    }
+}
+
+void start_option_menu(menu* menu) {
+    int out = 0;
+    int key;
+
+    print_options_menu(menu);
+    print_cursor_option_menu(menu->option_choice);
+
+    while(!out) {
+
+        if(kbhit()) {
+            key = getch();
+
+            switch(key) {
+                case KEY_ESC: print_main_menu(); print_cursor_main_menu(menu->main_choice); out = 1; break;
+                case KEY_ENTER: define_user_option(menu); break;
+                case KEY_UP: moveCursorOptionMenu(menu, -1); break;//Changer par changeDirection du Snake
+                case KEY_DOWN: moveCursorOptionMenu(menu, 1); break;
+            }
+        }
+
+    }
 }

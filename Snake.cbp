@@ -50,6 +50,7 @@
 		<Unit filename="game.h">
 			<Option target="Debug" />
 		</Unit>
+		<Unit filename="input_functions.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -82,10 +83,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="testAdrien.h" />
-		<Unit filename="testKerian.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="testKerian.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
